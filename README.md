@@ -49,12 +49,12 @@ The following screenshots demonstrate the application's interface and selected s
 
 | SOC Dashboard | Security Testing Lab |
 |:---:|:---:|
-| ![SOC Dashboard](assets/screenshots/soc_dashboard_overview.png) | ![Security Testing Lab](assets/screenshots/testing_lab_pipeline_full.png) |
+| ![SOC Dashboard](assets/screenshots/soc_dashboard.png) | ![Security Testing Lab](assets/screenshots/testing_lab_pipeline_full.png) |
 | *Security monitoring interface* | *Prompt inspection and pipeline visualization* |
 
 | Authentication Interface | Conversational Inspection Interface |
 |:---:|:---:|
-| ![Login Screen](assets/screenshots/login_screen.png) | ![User Chat Interface](assets/screenshots/user_chat_view.png) |
+| ![Login Screen](assets/screenshots/login.png) | ![User Chat Interface](assets/screenshots/user_chat_view.png) |
 | *Login and role selection* | *Conversational interface with security telemetry* |
 
 **Note:** Screenshots are demonstrations of the application's interface. Displayed metrics and simulated attack outcomes should not be interpreted as independently validated security benchmarks.
