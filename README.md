@@ -317,22 +317,30 @@ Additional libraries and external integrations depend on the installed dependenc
 
 ---
 
-# 📂 06. Project Structure
+# 📂 06 · PROJECT STRUCTURE
+
+<div align="center">
+
+### A modular architecture for AI security
+
+*Organized components. Clear responsibilities. Easier maintenance.*
+
+</div>
 
 ```text
-Aegis-AI-Phase1-Version1/
+🛡️ Aegis-AI-Phase1-Version1/
 │
-├── .streamlit/
+├── 📁 .streamlit/
 │   └── config.toml
 │
-├── assets/
-│   └── screenshots/
+├── 📁 assets/
+│   └── 📁 screenshots/
 │       ├── soc_dashboard_overview.png
 │       ├── testing_lab_pipeline_full.png
 │       ├── login_screen.png
 │       └── user_chat_view.png
 │
-├── backend/
+├── 📁 backend/
 │   ├── attack_logger.py
 │   ├── auth.py
 │   ├── blacklist_manager.py
@@ -344,20 +352,22 @@ Aegis-AI-Phase1-Version1/
 │   ├── threat_intelligence.py
 │   └── user_manager.py
 │
-├── data/
+├── 📁 data/
+│   └── Application data and security records
 │
-├── experiments/
+├── 📁 experiments/
+│   └── Experimental work and evaluation
 │
-├── frontend/
+├── 📁 frontend/
 │   └── app.py
 │
-├── security/
+├── 📁 security/
 │   ├── prompt_detector.py
 │   ├── prompt_sanitizer.py
 │   ├── semantic_detector.py
 │   └── threat_memory.py
 │
-├── tests/
+├── 📁 tests/
 │   └── test_aegis.py
 │
 ├── .env.example
@@ -370,229 +380,286 @@ Aegis-AI-Phase1-Version1/
 └── streamlit_app.py
 ```
 
-*This structure reflects the documented project layout. Verify file names against the current repository if the project has changed.*
+### 🧩 Component Directory
+
+| Component | Responsibility |
+|:---|:---|
+| `.streamlit/` | Streamlit configuration |
+| `assets/screenshots/` | Screenshots used in project documentation |
+| `backend/` | API, authentication, logging, and management modules |
+| `data/` | Application data and security records |
+| `experiments/` | Experimental work and evaluation |
+| `frontend/` | User interface and dashboard |
+| `security/` | Prompt detection, sanitization, semantic analysis, and threat memory |
+| `tests/` | Automated tests |
+| `.env.example` | Example environment configuration |
+| `.gitignore` | Git exclusion rules |
+| `requirements.txt` | Python dependencies |
+| `run.bat` / `run.ps1` | Windows startup scripts |
+| `streamlit_app.py` | Streamlit application entry point |
+
+> **Note:** Descriptive labels under `data/` and `experiments/` explain their intended purpose; they are not filenames. Keep the tree synchronized with the actual repository.
 
 ---
 
-# 🚀 07. Getting Started
+# 🚀 07 · GETTING STARTED
 
-Follow these steps to set up Aegis AI locally.
+<div align="center">
+
+### From repository to running application
+
+**Clone → Configure → Install → Launch**
+
+</div>
 
 ## Prerequisites
 
-Before starting, make sure you have:
+Before installing Aegis AI, make sure you have:
 
-- Python installed and compatible with the project dependencies.
-- Git installed.
-- A terminal such as PowerShell or Command Prompt.
-- A code editor such as Visual Studio Code.
+- Python compatible with the project dependencies
+- Git
+- Visual Studio Code or another code editor
+- PowerShell, Command Prompt, or a compatible terminal
 
-## Step 1 — Clone the Repository
+### Step 01 · Clone the repository
 
 ```bash
 git clone https://github.com/mohamedrizwan4518/An-adaptive-self-healing-semantic-ai-firewall-framework-v1-phase-1-.git
 ```
 
-Navigate to the project directory:
+Navigate to the cloned directory:
 
 ```bash
 cd An-adaptive-self-healing-semantic-ai-firewall-framework-v1-phase-1-
 ```
 
-## Step 2 — Create a Virtual Environment
+### Step 02 · Create a virtual environment
 
 ```bash
 python -m venv .venv
 ```
 
-### Windows PowerShell
+**Windows · PowerShell**
 
 ```powershell
 .\.venv\Scripts\Activate.ps1
 ```
 
-### Windows Command Prompt
+**Windows · Command Prompt**
 
 ```bat
 .venv\Scripts\activate.bat
 ```
 
-### Linux / macOS
+**Linux / macOS**
 
 ```bash
 source .venv/bin/activate
 ```
 
-## Step 3 — Install Dependencies
+### Step 03 · Install dependencies
 
 ```bash
 python -m pip install --upgrade pip
 pip install -r requirements.txt
 ```
 
-## Step 4 — Configure Environment Variables
+### Step 04 · Configure environment variables
 
-If the application requires environment variables, create a local `.env` file from the provided example.
+If required, create a local `.env` file using the supplied example.
 
-### Windows PowerShell
+**Windows · PowerShell**
 
 ```powershell
 Copy-Item .env.example .env
 ```
 
-### Linux / macOS
+**Linux / macOS**
 
 ```bash
 cp .env.example .env
 ```
 
-Open `.env` and configure the values required by the application.
+Open `.env` and configure the variables required by the application.
 
-If an external LLM provider is configured, use the API-key variable expected by the application.
+Use the exact environment-variable names expected by your implementation.
 
-> 🔒 **Security reminder:** Never upload actual API keys, passwords, access tokens, or other secrets to a public repository.
+> 🔐 **Security first:** Never commit real API keys, passwords, access tokens, or production credentials to GitHub.
 
-## Step 5 — Launch the Application
+### Step 05 · Launch Aegis AI
 
-### Windows PowerShell
-
-If the startup script is configured for your environment:
+**Windows · PowerShell**
 
 ```powershell
 .\run.ps1
 ```
 
-### Alternative: Run Streamlit Directly
+Alternatively, launch the Streamlit application directly:
 
 ```bash
 streamlit run streamlit_app.py
 ```
 
-When the application starts successfully, Streamlit typically displays a local address similar to:
+When startup succeeds, open the local address displayed in your terminal. The default Streamlit address is typically:
 
 ```text
 http://localhost:8501
 ```
 
-Open that address in your browser.
+**Expected result:** The application interface opens in your browser if startup completes successfully.
 
-The backend API and its documentation are available only if the backend starts successfully.
+The backend API and its documentation are available only if the backend starts correctly.
 
 ---
 
-# 🧪 08. Testing and Validation
+# 🧪 08 · TESTING & VALIDATION
 
-The repository includes a test module at:
+<div align="center">
+
+### Test the implementation. Measure the results. Document the evidence.
+
+</div>
+
+The repository includes a test module:
 
 ```text
 tests/test_aegis.py
 ```
 
-Run the tests using:
+Run the tests from the project root:
 
 ```bash
 python -m unittest tests.test_aegis -v
 ```
 
-Review the terminal output to determine which tests pass or fail.
+Review the terminal output to identify passed tests, failures, and execution errors.
 
-### Recommended Evaluation Metrics
+## Evaluation Metrics
 
-| Metric | What It Measures |
-|---|---|
-| Precision | Proportion of flagged prompts that are malicious within the labeled evaluation set. |
-| Recall | Proportion of malicious prompts successfully detected. |
-| F1-score | Combined measure of precision and recall. |
-| False-positive rate | Proportion of benign prompts incorrectly flagged. |
-| Detection latency | Time taken to inspect a prompt. |
-| Language-specific performance | Detection behavior across English, Tamil, and Tanglish. |
+| Metric | Purpose |
+|:---|:---|
+| **Precision** | Measures how many flagged prompts are malicious within the labeled test set |
+| **Recall** | Measures how many malicious prompts are detected |
+| **F1-score** | Combines precision and recall into one measure |
+| **False-positive rate** | Measures benign prompts incorrectly flagged |
+| **Detection latency** | Measures the time required to inspect a prompt |
+| **Language-specific performance** | Evaluates behavior across English, Tamil, and Tanglish |
 
-A meaningful security evaluation requires a documented dataset, defined test conditions, and reproducible results.
+### Recommended validation process
 
-**No specific detection-accuracy figure is claimed here without verified experimental evidence.**
+1. Prepare a documented collection of benign and adversarial prompts.
+2. Label the examples before evaluating the detector.
+3. Run the same test cases against the configured implementation.
+4. Record false positives, false negatives, and processing time.
+5. Document the test environment and results.
+6. Repeat the evaluation after changing detection rules or models.
+
+> **Research integrity:** Do not report accuracy percentages or claim that every test passes unless the results have been measured and verified.
 
 ---
 
-# 🔐 09. Security Considerations
+# 🔐 09 · SECURITY & RESPONSIBLE USE
 
 Aegis AI is a prototype intended for development, experimentation, and demonstration.
 
 It should not be treated as the sole security boundary for a production LLM application.
 
-Before production deployment, review the following:
+## Security checklist
 
-- Authentication and secure password handling.
-- Server-side authorization for privileged operations.
-- Direct and indirect prompt-injection defenses.
-- API-key and secret management.
-- Input validation and output handling.
-- Rate limiting and abuse prevention.
-- Audit logging and sensitive-data retention.
-- Threat-memory integrity.
-- Isolation of untrusted model outputs.
-- Testing against realistic attack scenarios.
+| Security Area | What to Review |
+|:---|:---|
+| 🔑 Authentication | Password handling and session management |
+| 🛂 Authorization | Server-side permission checks for privileged actions |
+| 🧠 Prompt security | Direct and indirect prompt-injection defenses |
+| 🔒 Secrets | API-key and credential protection |
+| 🧹 Input handling | Validation of untrusted input |
+| 📝 Audit logging | Integrity of records and protection of sensitive data |
+| 🚦 Abuse prevention | Rate limits and request controls |
+| 🗃️ Threat memory | Integrity and safe handling of stored records |
+| 🧪 Validation | Testing against realistic attack scenarios |
 
-### Demo Credentials
+### Demo credentials
 
-If demonstration accounts are configured in the application, use them only in an isolated demo environment.
+If the application contains demonstration accounts, use them only in an isolated demo environment.
 
-Do not expose working default administrator credentials or sensitive local data in a public deployment.
+Before exposing the application publicly:
 
-Verify authentication and authorization before allowing external access.
+- Replace default administrator credentials.
+- Verify authentication and authorization.
+- Remove sensitive local data.
+- Review API-key handling.
+- Check whether administrative endpoints are adequately protected.
+
+**A security dashboard alone does not guarantee that the underlying application is secure.**
 
 ---
 
-# ☁️ 10. Deployment
+# ☁️ 10 · DEPLOYMENT
 
-The repository includes the Streamlit entry point:
+The repository contains the Streamlit entry point:
 
 ```text
 streamlit_app.py
 ```
 
-Streamlit Community Cloud may be an option for hosting the interface.
+Streamlit Community Cloud may be suitable for hosting the interface, depending on the application's requirements.
 
-Before deployment:
+## Pre-deployment checklist
 
-1. Verify that the application runs locally.
-2. Confirm dependency compatibility.
-3. Configure secrets through the hosting platform.
-4. Review backend startup requirements.
-5. Check data persistence and file-system behavior.
-6. Test authentication and access controls.
-7. Verify the deployed application's behavior.
+- [ ] Confirm that the application runs locally.
+- [ ] Verify dependency compatibility.
+- [ ] Configure secrets through the hosting platform.
+- [ ] Check backend startup requirements.
+- [ ] Review file-system and data-persistence behavior.
+- [ ] Test authentication and access controls.
+- [ ] Verify all screenshot and resource paths.
+- [ ] Test the deployed application.
 
-A successful local run does not guarantee that all backend processes, integrations, or persistence features will work in a hosted environment.
+### Important deployment considerations
 
----
+A successful local run does not guarantee that the application will work identically in a hosted environment.
 
-# 🗺️ 11. Future Roadmap
+Backend processes, external model integrations, persistent storage, and hosting restrictions must be evaluated separately.
 
-Aegis AI can be extended through additional research, implementation, and evaluation.
-
-- [ ] Expand the labeled prompt-attack dataset.
-- [ ] Evaluate precision, recall, and F1-score.
-- [ ] Measure false-positive rates and detection latency.
-- [ ] Improve Tamil and Tanglish evaluation coverage.
-- [ ] Enhance explainability for security decisions.
-- [ ] Add regression tests for known attack patterns.
-- [ ] Strengthen authentication and authorization.
-- [ ] Improve security-event reporting.
-- [ ] Evaluate concurrent-request performance.
-- [ ] Document threat models and known limitations.
-- [ ] Validate deployment and storage requirements.
-
-These items are proposed future improvements, not claims that the functionality is already implemented.
+Do not expose demonstration credentials or sensitive local data in a public deployment.
 
 ---
 
-# 👥 12. Meet the Team
+# 🗺️ 11 · PROJECT ROADMAP
 
 <div align="center">
 
-## 🤝 TEAM AEGIS AI
+### Building toward a more thoroughly evaluated security framework
 
-**Three Members. One Collaborative Project. One Shared Vision.**
+</div>
+
+The following items are proposed enhancements for future development.
+
+| Status | Planned Improvement |
+|:---:|:---|
+| ◻️ | Expand the labeled prompt-attack dataset |
+| ◻️ | Evaluate precision, recall, and F1-score |
+| ◻️ | Measure false-positive rates and detection latency |
+| ◻️ | Improve Tamil and Tanglish evaluation coverage |
+| ◻️ | Enhance explanations for security decisions |
+| ◻️ | Add regression tests for known attack patterns |
+| ◻️ | Strengthen authentication and authorization |
+| ◻️ | Improve security-event reporting |
+| ◻️ | Evaluate concurrent-request performance |
+| ◻️ | Document threat models and limitations |
+| ◻️ | Validate deployment and storage requirements |
+
+**Roadmap note:** These are proposed improvements, not claims that the functionality is already implemented.
+
+---
+
+# 👥 12 · MEET THE TEAM
+
+<div align="center">
+
+## 🛡️ TEAM AEGIS AI
+
+### Three Members · One Collaborative Project
 
 *Working together to explore safer and more secure LLM-powered applications.*
 
@@ -600,31 +667,57 @@ These items are proposed future improvements, not claims that the functionality 
 
 </div>
 
-### 🎓 Team Members
+## Team Members
 
-| No. | Team Member |
-|:---:|---|
-| 01 | **HARIHARAN V.S.** |
-| 02 | **RASHIKA V.** |
-| 03 | **RUBINI T.** |
+<table>
+<tr>
+<td align="center" width="33%">
 
-### 📌 Project Information
+### 👨‍💻
+
+**HARIHARAN V.S.**
+
+Team Member
+
+</td>
+<td align="center" width="33%">
+
+### 👩‍💻
+
+**RASHIKA V.**
+
+Team Member
+
+</td>
+<td align="center" width="33%">
+
+### 👩‍💻
+
+**RUBINI T.**
+
+Team Member
+
+</td>
+</tr>
+</table>
+
+## Project Information
 
 | Category | Details |
-|---|---|
-| Project Name | Aegis AI — Adaptive Semantic AI Firewall |
-| Project Type | Team Project |
-| Project Phase | Phase 1 |
-| Version | 1.0 |
-| Domain | Artificial Intelligence & Cybersecurity |
-| Institution | Achariya College of Engineering and Technology |
-| Location | Puducherry, India |
+|:---|:---|
+| **Project** | Aegis AI — Adaptive Semantic AI Firewall |
+| **Project Type** | Team Project |
+| **Phase** | Phase 1 |
+| **Version** | 1.0 |
+| **Domain** | Artificial Intelligence & Cybersecurity |
+| **Institution** | Achariya College of Engineering and Technology |
+| **Location** | Puducherry, India |
 
-### 💡 Our Collaborative Approach
+## Our Collaborative Approach
 
 Aegis AI brings together collaborative problem-solving, software development, security experimentation, and documentation.
 
-The team is exploring how layered detection, semantic analysis, and risk-based security decisions can contribute to the protection of applications powered by Large Language Models.
+The team is exploring how layered detection, semantic analysis, and risk-based decisions can contribute to the protection of applications powered by Large Language Models.
 
 **Our shared objective is to learn, build, test, and improve through practical engineering.**
 
@@ -632,25 +725,25 @@ The team is exploring how layered detection, semantic analysis, and risk-based s
 
 ---
 
-# 🔗 13. Project Repository
+# 🔗 13 · PROJECT REPOSITORY
 
 <div align="center">
 
-### Explore Aegis AI on GitHub
+### Explore the source code
 
-[![Open Repository](https://img.shields.io/badge/OPEN%20PROJECT-GitHub-181717?style=for-the-badge&logo=github&logoColor=white)](https://github.com/mohamedrizwan4518/An-adaptive-self-healing-semantic-ai-firewall-framework-v1-phase-1-)
+[![Open on GitHub](https://img.shields.io/badge/EXPLORE%20PROJECT-GitHub-181717?style=for-the-badge&logo=github&logoColor=white)](https://github.com/mohamedrizwan4518/An-adaptive-self-healing-semantic-ai-firewall-framework-v1-phase-1-)
 
 <br>
 
-**Repository:** `An-adaptive-self-healing-semantic-ai-firewall-framework-v1-phase-1-`
+**AEGIS AI · PHASE 1 · VERSION 1.0**
 
 </div>
 
 ---
 
-# 📄 14. License
+# 📄 14 · LICENSE
 
-This repository includes a [`LICENSE`](LICENSE) file.
+This repository contains a [`LICENSE`](LICENSE) file.
 
 Refer to that file for the applicable license terms.
 
@@ -660,7 +753,7 @@ Refer to that file for the applicable license terms.
 
 # 🛡️ AEGIS AI
 
-### Detect. Analyze. Defend. Adapt.
+### DETECT · ANALYZE · DEFEND · ADAPT
 
 *Exploring a safer layer for LLM-powered applications.*
 
@@ -671,6 +764,12 @@ Refer to that file for the applicable license terms.
 HARIHARAN V.S. · RASHIKA V. · RUBINI T.
 
 <br>
+
+![Phase](https://img.shields.io/badge/PHASE-01-blue?style=flat-square)
+![Version](https://img.shields.io/badge/VERSION-1.0-green?style=flat-square)
+![Focus](https://img.shields.io/badge/FOCUS-LLM%20SECURITY-purple?style=flat-square)
+
+</div>
 
 ![Phase](https://img.shields.io/badge/PHASE-01-blue?style=flat-square)
 ![Version](https://img.shields.io/badge/VERSION-1.0-green?style=flat-square)
