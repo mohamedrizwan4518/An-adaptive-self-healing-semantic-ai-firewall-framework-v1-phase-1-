@@ -1,0 +1,57 @@
+{
+  "table": [
+    {
+      "category": "Prompt Injection",
+      "attempts": 20,
+      "sanitized": 16,
+      "ssr": "80.0%",
+      "recheck_passed": "14 (70.0%)",
+      "fail_safe_blocked": "6 (30.0%)",
+      "ips": "100.0%"
+    },
+    {
+      "category": "Jailbreak",
+      "attempts": 20,
+      "sanitized": 19,
+      "ssr": "95.0%",
+      "recheck_passed": "13 (65.0%)",
+      "fail_safe_blocked": "7 (35.0%)",
+      "ips": "94.7%"
+    },
+    {
+      "category": "System Prompt Extraction",
+      "attempts": 20,
+      "sanitized": 17,
+      "ssr": "85.0%",
+      "recheck_passed": "10 (50.0%)",
+      "fail_safe_blocked": "10 (50.0%)",
+      "ips": "100.0%"
+    },
+    {
+      "category": "Role Manipulation",
+      "attempts": 20,
+      "sanitized": 19,
+      "ssr": "95.0%",
+      "recheck_passed": "12 (60.0%)",
+      "fail_safe_blocked": "8 (40.0%)",
+      "ips": "89.5%"
+    },
+    {
+      "category": "Safety Bypass",
+      "attempts": 20,
+      "sanitized": 18,
+      "ssr": "90.0%",
+      "recheck_passed": "17 (85.0%)",
+      "fail_safe_blocked": "3 (15.0%)",
+      "ips": "100.0%"
+    }
+  ],
+  "overall": {
+    "attempts": 100,
+    "sanitized": 89,
+    "ssr": "89.0%",
+    "recheck_passed": "66 (66.0%)",
+    "fail_safe_blocked": "34 (34.0%)",
+    "ips": "96.6%"
+  }
+}

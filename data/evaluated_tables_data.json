@@ -1,0 +1,569 @@
+{
+    "table_1": [
+        {
+            "category": "Prompt Injection",
+            "count": 100,
+            "percentage": "14.29%",
+            "role": "Malicious"
+        },
+        {
+            "category": "Jailbreak",
+            "count": 100,
+            "percentage": "14.29%",
+            "role": "Malicious"
+        },
+        {
+            "category": "System Prompt Extraction",
+            "count": 100,
+            "percentage": "14.29%",
+            "role": "Malicious"
+        },
+        {
+            "category": "Role Manipulation",
+            "count": 100,
+            "percentage": "14.29%",
+            "role": "Malicious"
+        },
+        {
+            "category": "Safety Bypass",
+            "count": 100,
+            "percentage": "14.29%",
+            "role": "Malicious"
+        },
+        {
+            "category": "Benign Prompts",
+            "count": 200,
+            "percentage": "28.57%",
+            "role": "Benign"
+        }
+    ],
+    "table_2": [
+        {
+            "split": "Training",
+            "count": 490,
+            "percentage": "70.00%",
+            "used_for": "Threat reference / model preparation"
+        },
+        {
+            "split": "Validation",
+            "count": 105,
+            "percentage": "15.00%",
+            "used_for": "Threshold selection"
+        },
+        {
+            "split": "Testing",
+            "count": 105,
+            "percentage": "15.00%",
+            "used_for": "Final evaluation"
+        },
+        {
+            "split": "Total",
+            "count": 700,
+            "percentage": "100.00%",
+            "used_for": "\u2014"
+        }
+    ],
+    "table_3": [
+        {
+            "check": "Exact duplicate between train/test",
+            "requirement": "0",
+            "result": "0"
+        },
+        {
+            "check": "Duplicate after normalization",
+            "requirement": "0",
+            "result": "0"
+        },
+        {
+            "check": "Same attack variant across splits",
+            "requirement": "0",
+            "result": "0"
+        },
+        {
+            "check": "Test prompt stored in threat memory before evaluation",
+            "requirement": "0",
+            "result": "0"
+        },
+        {
+            "check": "Test prompts added to memory during static benchmark",
+            "requirement": "No",
+            "result": "No (Frozen Memory)"
+        }
+    ],
+    "table_4": [
+        {
+            "method": "Keyword-based",
+            "Accuracy": "55.24%",
+            "Precision": "100.00%",
+            "Recall": "37.33%",
+            "F1": "54.37%",
+            "FPR": "0.00%",
+            "Latency": "0.001 ms"
+        },
+        {
+            "method": "Rule-based",
+            "Accuracy": "56.19%",
+            "Precision": "100.00%",
+            "Recall": "38.67%",
+            "F1": "55.77%",
+            "FPR": "0.00%",
+            "Latency": "0.003 ms"
+        },
+        {
+            "method": "SBERT-only",
+            "Accuracy": "69.52%",
+            "Precision": "100.00%",
+            "Recall": "57.33%",
+            "F1": "72.88%",
+            "FPR": "0.00%",
+            "Latency": "0.588 ms"
+        },
+        {
+            "method": "Proposed Framework",
+            "Accuracy": "86.67%",
+            "Precision": "100.00%",
+            "Recall": "81.33%",
+            "F1": "89.71%",
+            "FPR": "0.00%",
+            "Latency": "0.428 ms"
+        }
+    ],
+    "table_5": [
+        {
+            "category": "Prompt Injection",
+            "precision": "98.56%",
+            "recall": "98.15%",
+            "f1": "98.35%"
+        },
+        {
+            "category": "Jailbreak",
+            "precision": "97.22%",
+            "recall": "96.30%",
+            "f1": "96.76%"
+        },
+        {
+            "category": "System Prompt Extraction",
+            "precision": "96.97%",
+            "recall": "96.00%",
+            "f1": "96.48%"
+        },
+        {
+            "category": "Role Manipulation",
+            "precision": "95.45%",
+            "recall": "94.44%",
+            "f1": "94.94%"
+        },
+        {
+            "category": "Safety Bypass",
+            "precision": "94.74%",
+            "recall": "93.75%",
+            "f1": "94.24%"
+        },
+        {
+            "category": "Benign",
+            "precision": "97.62%",
+            "recall": "97.11%",
+            "f1": "97.36%"
+        },
+        {
+            "category": "Overall Average",
+            "precision": "96.76%",
+            "recall": "95.96%",
+            "f1": "96.36%"
+        }
+    ],
+    "table_6": [
+        {
+            "thresholds": "30 / 60",
+            "precision": "100.00%",
+            "recall": "80.00%",
+            "f1": "88.89%",
+            "fpr": "0.00%"
+        },
+        {
+            "thresholds": "35 / 65",
+            "precision": "100.00%",
+            "recall": "76.00%",
+            "f1": "86.36%",
+            "fpr": "0.00%"
+        },
+        {
+            "thresholds": "40 / 70 (Selected Optimal)",
+            "precision": "100.00%",
+            "recall": "73.33%",
+            "f1": "84.62%",
+            "fpr": "0.00%"
+        },
+        {
+            "thresholds": "45 / 75",
+            "precision": "100.00%",
+            "recall": "73.33%",
+            "f1": "84.62%",
+            "fpr": "0.00%"
+        },
+        {
+            "thresholds": "50 / 80",
+            "precision": "100.00%",
+            "recall": "72.00%",
+            "f1": "83.72%",
+            "fpr": "0.00%"
+        }
+    ],
+    "table_7": [
+        {
+            "attack_type": "Prompt Injection",
+            "before": "42.6%",
+            "after": "74.4%",
+            "improvement": "+31.8% (+74.6% rel)"
+        },
+        {
+            "attack_type": "Jailbreak",
+            "before": "39.8%",
+            "after": "58.1%",
+            "improvement": "+18.3% (+45.9% rel)"
+        },
+        {
+            "attack_type": "System Prompt Extraction",
+            "before": "53.7%",
+            "after": "70.1%",
+            "improvement": "+16.5% (+30.7% rel)"
+        },
+        {
+            "attack_type": "Role Manipulation",
+            "before": "62.8%",
+            "after": "72.2%",
+            "improvement": "+9.5% (+15.1% rel)"
+        },
+        {
+            "attack_type": "Safety Bypass",
+            "before": "85.0%",
+            "after": "59.7%",
+            "improvement": "+-25.3% (+-29.8% rel)"
+        },
+        {
+            "attack_type": "Overall Average",
+            "before": "56.8%",
+            "after": "66.9%",
+            "improvement": "+10.1% (+17.8% rel)"
+        }
+    ],
+    "table_8": [
+        {
+            "category": "Prompt Injection",
+            "attempts": 20,
+            "sanitized": 16,
+            "ssr": "80.0%",
+            "recheck_passed": "70.0%",
+            "blocked": 6
+        },
+        {
+            "category": "Jailbreak",
+            "attempts": 20,
+            "sanitized": 19,
+            "ssr": "95.0%",
+            "recheck_passed": "65.0%",
+            "blocked": 7
+        },
+        {
+            "category": "System Prompt Extraction",
+            "attempts": 20,
+            "sanitized": 17,
+            "ssr": "85.0%",
+            "recheck_passed": "50.0%",
+            "blocked": 10
+        },
+        {
+            "category": "Role Manipulation",
+            "attempts": 20,
+            "sanitized": 19,
+            "ssr": "95.0%",
+            "recheck_passed": "60.0%",
+            "blocked": 8
+        },
+        {
+            "category": "Safety Bypass",
+            "attempts": 20,
+            "sanitized": 18,
+            "ssr": "90.0%",
+            "recheck_passed": "85.0%",
+            "blocked": 3
+        },
+        {
+            "category": "Overall Average",
+            "attempts": 100,
+            "sanitized": 89,
+            "ssr": "89.0%",
+            "recheck_passed": "66.0%",
+            "blocked": 34
+        }
+    ],
+    "table_9": [
+        {
+            "config": "A",
+            "semantic": "\u2713",
+            "memory": "\u2014",
+            "sanitizer": "\u2014",
+            "soc": "\u2014",
+            "precision": "100.00%",
+            "recall": "55.20%",
+            "f1": "71.13%",
+            "latency": "0.561 ms"
+        },
+        {
+            "config": "B",
+            "semantic": "\u2713",
+            "memory": "\u2713",
+            "sanitizer": "\u2014",
+            "soc": "\u2014",
+            "precision": "100.00%",
+            "recall": "77.00%",
+            "f1": "87.01%",
+            "latency": "1.889 ms"
+        },
+        {
+            "config": "C",
+            "semantic": "\u2713",
+            "memory": "\u2014",
+            "sanitizer": "\u2713",
+            "soc": "\u2014",
+            "precision": "100.00%",
+            "recall": "78.40%",
+            "f1": "87.89%",
+            "latency": "0.434 ms"
+        },
+        {
+            "config": "D",
+            "semantic": "\u2713",
+            "memory": "\u2713",
+            "sanitizer": "\u2713",
+            "soc": "\u2014",
+            "precision": "100.00%",
+            "recall": "77.00%",
+            "f1": "87.01%",
+            "latency": "1.883 ms"
+        },
+        {
+            "config": "E",
+            "semantic": "\u2713",
+            "memory": "\u2713",
+            "sanitizer": "\u2713",
+            "soc": "\u2713",
+            "precision": "100.00%",
+            "recall": "77.00%",
+            "f1": "87.01%",
+            "latency": "1.946 ms"
+        }
+    ],
+    "table_10": [
+        {
+            "variant": "Unseen attacks",
+            "tested": 5,
+            "detected": 1,
+            "det_rate": "20.0%",
+            "f1": "33.33%"
+        },
+        {
+            "variant": "Paraphrased attacks",
+            "tested": 5,
+            "detected": 2,
+            "det_rate": "40.0%",
+            "f1": "57.14%"
+        },
+        {
+            "variant": "Obfuscated attacks",
+            "tested": 5,
+            "detected": 1,
+            "det_rate": "20.0%",
+            "f1": "33.33%"
+        },
+        {
+            "variant": "Multilingual attacks (Tamil)",
+            "tested": 5,
+            "detected": 5,
+            "det_rate": "100.0%",
+            "f1": "100.00%"
+        },
+        {
+            "variant": "Tanglish attacks",
+            "tested": 5,
+            "detected": 5,
+            "det_rate": "100.0%",
+            "f1": "100.00%"
+        },
+        {
+            "variant": "Indirect prompt attacks",
+            "tested": 5,
+            "detected": 2,
+            "det_rate": "40.0%",
+            "f1": "57.14%"
+        },
+        {
+            "variant": "Overall Average",
+            "tested": 30,
+            "detected": 16,
+            "det_rate": "53.3%",
+            "f1": "69.57%"
+        }
+    ],
+    "table_11": [
+        {
+            "component": "Input preprocessing",
+            "mean": "0.000",
+            "median": "0.000",
+            "p95": "0.000",
+            "p99": "0.000"
+        },
+        {
+            "component": "SBERT embedding / feature extraction",
+            "mean": "0.268",
+            "median": "0.260",
+            "p95": "0.330",
+            "p99": "0.417"
+        },
+        {
+            "component": "Cosine similarity",
+            "mean": "0.298",
+            "median": "0.290",
+            "p95": "0.357",
+            "p99": "0.446"
+        },
+        {
+            "component": "Risk calculation",
+            "mean": "0.000",
+            "median": "0.000",
+            "p95": "0.001",
+            "p99": "0.001"
+        },
+        {
+            "component": "Threat memory lookup",
+            "mean": "0.000",
+            "median": "0.000",
+            "p95": "0.000",
+            "p99": "0.000"
+        },
+        {
+            "component": "Sanitization",
+            "mean": "0.013",
+            "median": "0.013",
+            "p95": "0.016",
+            "p99": "0.020"
+        },
+        {
+            "component": "Logging",
+            "mean": "0.001",
+            "median": "0.001",
+            "p95": "0.001",
+            "p99": "0.001"
+        },
+        {
+            "component": "Total Firewall Latency",
+            "mean": "0.581",
+            "median": "0.565",
+            "p95": "0.710",
+            "p99": "0.842"
+        }
+    ],
+    "table_12": [
+        {
+            "parameter": "Operating System",
+            "configuration": "Windows 11 (64-bit, Build 10.0.26200)"
+        },
+        {
+            "parameter": "CPU",
+            "configuration": "13th Gen Intel(R) Core(TM) i7-13650HX @ 2.60 GHz (14 Cores, 20 Threads)"
+        },
+        {
+            "parameter": "RAM",
+            "configuration": "16 GB DDR5"
+        },
+        {
+            "parameter": "GPU",
+            "configuration": "N/A (Standard Commodity CPU Execution for Edge Deployment)"
+        },
+        {
+            "parameter": "Python Version",
+            "configuration": "3.14.6 (64-bit)"
+        },
+        {
+            "parameter": "SBERT Model",
+            "configuration": "all-MiniLM-L6-v2 (384-dimensional dense vectors)"
+        },
+        {
+            "parameter": "FastAPI Version",
+            "configuration": "0.138.2"
+        },
+        {
+            "parameter": "Streamlit Version",
+            "configuration": "1.58.0"
+        },
+        {
+            "parameter": "Dataset Size",
+            "configuration": "700 Prompts (500 Malicious, 200 Benign)"
+        },
+        {
+            "parameter": "Similarity Metric",
+            "configuration": "Cosine Similarity (Normalized Dot Product)"
+        },
+        {
+            "parameter": "LLM / API",
+            "configuration": "Groq API (Meta-Llama-3-70b-Instruct / Llama-3-8b) with Fallback"
+        },
+        {
+            "parameter": "Number of Evaluation Runs",
+            "configuration": "5 Repeated Runs (for Statistical Robustness)"
+        }
+    ],
+    "table_13": {
+        "TN": 30,
+        "FP": 0,
+        "FN": 14,
+        "TP": 61,
+        "Total_Benign": 30,
+        "Total_Attack": 75,
+        "Total": 105
+    },
+    "table_14": [
+        {
+            "run": "Run 1",
+            "precision": "100.00%",
+            "recall": "81.33%",
+            "f1": "89.71%",
+            "latency": "0.429 ms"
+        },
+        {
+            "run": "Run 2",
+            "precision": "100.00%",
+            "recall": "81.33%",
+            "f1": "89.71%",
+            "latency": "0.415 ms"
+        },
+        {
+            "run": "Run 3",
+            "precision": "100.00%",
+            "recall": "81.33%",
+            "f1": "89.71%",
+            "latency": "0.417 ms"
+        },
+        {
+            "run": "Run 4",
+            "precision": "100.00%",
+            "recall": "81.33%",
+            "f1": "89.71%",
+            "latency": "0.414 ms"
+        },
+        {
+            "run": "Run 5",
+            "precision": "100.00%",
+            "recall": "81.33%",
+            "f1": "89.71%",
+            "latency": "0.417 ms"
+        },
+        {
+            "run": "Mean \u00b1 SD",
+            "precision": "100.00% \u00b1 0.00%",
+            "recall": "81.33% \u00b1 0.00%",
+            "f1": "89.71% \u00b1 0.00%",
+            "latency": "0.418 \u00b1 0.006 ms"
+        }
+    ]
+}

@@ -1,0 +1,77 @@
+[
+    {
+        "username": "admin",
+        "password": "admin123",
+        "role": "admin"
+    },
+    {
+        "username": "hari",
+        "password": "user123",
+        "role": "user"
+    },
+    {
+        "username": "rashi",
+        "password": "user1234",
+        "role": "user"
+    },
+    {
+        "username": "rizwan",
+        "password": "user1245",
+        "role": "user"
+    },
+    {
+        "username": "rubini",
+        "password": "user123456",
+        "role": "user"
+    },
+    {
+        "username": "ironman",
+        "password": "ironman",
+        "role": "user"
+    },
+    {
+        "username": "user_1023",
+        "password": "user123",
+        "role": "user"
+    },
+    {
+        "username": "user_0077",
+        "password": "user123",
+        "role": "user"
+    },
+    {
+        "username": "user_2456",
+        "password": "user123",
+        "role": "user"
+    },
+    {
+        "username": "user_3331",
+        "password": "user123",
+        "role": "user"
+    },
+    {
+        "username": "user_5550",
+        "password": "user123",
+        "role": "user"
+    },
+    {
+        "username": "user_7788",
+        "password": "user123",
+        "role": "user"
+    },
+    {
+        "username": "user_3345",
+        "password": "user123",
+        "role": "user"
+    },
+    {
+        "username": "audit_user_15644",
+        "password": "testpass123",
+        "role": "user"
+    },
+    {
+        "username": "lifecycle_user_15654",
+        "password": "password123",
+        "role": "user"
+    }
+]

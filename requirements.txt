@@ -1,0 +1,14 @@
+fastapi
+uvicorn
+pydantic
+requests
+httpx
+python-dotenv
+streamlit
+pandas
+matplotlib
+streamlit-autorefresh
+scikit-learn
+numpy
+sentence-transformers
+torch

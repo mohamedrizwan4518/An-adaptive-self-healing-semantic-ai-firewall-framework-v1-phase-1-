@@ -1,0 +1,27 @@
+[
+    {
+        "username": "hari",
+        "reason": "Prompt injection detected",
+        "time": "2026-09-08 17:30:10"
+    },
+    {
+        "username": "hari",
+        "reason": "Repeated adversarial signature",
+        "time": "2026-09-08 18:15:22"
+    },
+    {
+        "username": "user_3331",
+        "reason": "System prompt extraction attempt",
+        "time": "2026-09-08 17:03:00"
+    },
+    {
+        "username": "rashi",
+        "reason": "High-risk adversarial vector",
+        "time": "2026-09-08 17:20:00"
+    },
+    {
+        "username": "lifecycle_user_15654",
+        "reason": "Test warning",
+        "time": "2026-09-30 10:06:55"
+    }
+]

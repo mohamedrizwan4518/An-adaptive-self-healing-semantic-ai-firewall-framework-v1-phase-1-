@@ -1,0 +1,357 @@
+{
+    "table_6": [
+        {
+            "thresholds": "30 / 60",
+            "precision": "89.29%",
+            "recall": "100.00%",
+            "f1": "94.34%",
+            "fpr": "30.00%",
+            "tp": 75,
+            "fp": 9,
+            "tn": 21,
+            "fn": 0
+        },
+        {
+            "thresholds": "35 / 65",
+            "precision": "92.21%",
+            "recall": "94.67%",
+            "f1": "93.42%",
+            "fpr": "20.00%",
+            "tp": 71,
+            "fp": 6,
+            "tn": 24,
+            "fn": 4
+        },
+        {
+            "thresholds": "40 / 70 (Selected Optimal)",
+            "precision": "98.55%",
+            "recall": "90.67%",
+            "f1": "94.44%",
+            "fpr": "3.33%",
+            "tp": 68,
+            "fp": 1,
+            "tn": 29,
+            "fn": 7
+        },
+        {
+            "thresholds": "45 / 75",
+            "precision": "100.00%",
+            "recall": "89.33%",
+            "f1": "94.37%",
+            "fpr": "0.00%",
+            "tp": 67,
+            "fp": 0,
+            "tn": 30,
+            "fn": 8
+        },
+        {
+            "thresholds": "50 / 80",
+            "precision": "100.00%",
+            "recall": "84.00%",
+            "f1": "91.30%",
+            "fpr": "0.00%",
+            "tp": 63,
+            "fp": 0,
+            "tn": 30,
+            "fn": 12
+        }
+    ],
+    "table_7": [
+        {
+            "category": "Prompt Injection",
+            "cold_det": "90.0%",
+            "cold_sim": "81.2",
+            "warm_det": "100.0%",
+            "warm_sim": "87.4",
+            "abs_imp": "+10.0%",
+            "rel_imp": "+11.1%"
+        },
+        {
+            "category": "Jailbreak",
+            "cold_det": "95.0%",
+            "cold_sim": "88.9",
+            "warm_det": "100.0%",
+            "warm_sim": "67.7",
+            "abs_imp": "+5.0%",
+            "rel_imp": "+5.3%"
+        },
+        {
+            "category": "System Prompt Extraction",
+            "cold_det": "95.0%",
+            "cold_sim": "80.9",
+            "warm_det": "100.0%",
+            "warm_sim": "87.4",
+            "abs_imp": "+5.0%",
+            "rel_imp": "+5.3%"
+        },
+        {
+            "category": "Role Manipulation",
+            "cold_det": "100.0%",
+            "cold_sim": "95.7",
+            "warm_det": "100.0%",
+            "warm_sim": "82.2",
+            "abs_imp": "+0.0%",
+            "rel_imp": "+0.0%"
+        },
+        {
+            "category": "Safety Bypass",
+            "cold_det": "90.0%",
+            "cold_sim": "82.8",
+            "warm_det": "100.0%",
+            "warm_sim": "60.6",
+            "abs_imp": "+10.0%",
+            "rel_imp": "+11.1%"
+        },
+        {
+            "category": "Overall Average (N=100)",
+            "cold_det": "94.0%",
+            "cold_sim": "85.9",
+            "warm_det": "100.0%",
+            "warm_sim": "77.1",
+            "abs_imp": "+6.0%",
+            "rel_imp": "+6.4%"
+        }
+    ],
+    "table_8": [
+        {
+            "category": "Prompt Injection",
+            "attempts": 20,
+            "sanitized": 16,
+            "ssr": "80.0%",
+            "recheck_passed": "14 (70.0%)",
+            "failsafe_blocked": "6 (30.0%)"
+        },
+        {
+            "category": "Jailbreak",
+            "attempts": 20,
+            "sanitized": 19,
+            "ssr": "95.0%",
+            "recheck_passed": "13 (65.0%)",
+            "failsafe_blocked": "7 (35.0%)"
+        },
+        {
+            "category": "System Prompt Extraction",
+            "attempts": 20,
+            "sanitized": 17,
+            "ssr": "85.0%",
+            "recheck_passed": "10 (50.0%)",
+            "failsafe_blocked": "10 (50.0%)"
+        },
+        {
+            "category": "Role Manipulation",
+            "attempts": 20,
+            "sanitized": 19,
+            "ssr": "95.0%",
+            "recheck_passed": "12 (60.0%)",
+            "failsafe_blocked": "8 (40.0%)"
+        },
+        {
+            "category": "Safety Bypass",
+            "attempts": 20,
+            "sanitized": 18,
+            "ssr": "90.0%",
+            "recheck_passed": "17 (85.0%)",
+            "failsafe_blocked": "3 (15.0%)"
+        },
+        {
+            "category": "Overall Average (N=100)",
+            "attempts": 100,
+            "sanitized": 89,
+            "ssr": "89.0%",
+            "recheck_passed": "66 (66.0%)",
+            "failsafe_blocked": "34 (34.0%)"
+        }
+    ],
+    "table_9": [
+        {
+            "config": "A",
+            "semantic": "\u2713",
+            "lexical": "\u2014",
+            "memory": "\u2014",
+            "sanitizer": "\u2014",
+            "soc": "\u2014",
+            "precision": "100.00%",
+            "recall": "58.67%",
+            "f1": "73.95%",
+            "latency": "0.627 ms"
+        },
+        {
+            "config": "B",
+            "semantic": "\u2713",
+            "lexical": "\u2713",
+            "memory": "\u2014",
+            "sanitizer": "\u2014",
+            "soc": "\u2014",
+            "precision": "100.00%",
+            "recall": "72.00%",
+            "f1": "83.72%",
+            "latency": "0.450 ms"
+        },
+        {
+            "config": "C",
+            "semantic": "\u2713",
+            "lexical": "\u2713",
+            "memory": "\u2713",
+            "sanitizer": "\u2014",
+            "soc": "\u2014",
+            "precision": "100.00%",
+            "recall": "65.33%",
+            "f1": "79.03%",
+            "latency": "1.276 ms"
+        },
+        {
+            "config": "D",
+            "semantic": "\u2713",
+            "lexical": "\u2713",
+            "memory": "\u2713",
+            "sanitizer": "\u2713",
+            "soc": "\u2014",
+            "precision": "100.00%",
+            "recall": "93.33%",
+            "f1": "96.55%",
+            "latency": "1.262 ms"
+        },
+        {
+            "config": "E (Full)",
+            "semantic": "\u2713",
+            "lexical": "\u2713",
+            "memory": "\u2713",
+            "sanitizer": "\u2713",
+            "soc": "\u2713",
+            "precision": "100.00%",
+            "recall": "93.33%",
+            "f1": "96.55%",
+            "latency": "0.659 ms"
+        }
+    ],
+    "table_10": [
+        {
+            "variant": "Unseen Zero-Day Attacks",
+            "tested": 50,
+            "detected": 21,
+            "det_rate": "42.0%",
+            "f1": "59.15%"
+        },
+        {
+            "variant": "Paraphrased Attacks",
+            "tested": 50,
+            "detected": 43,
+            "det_rate": "86.0%",
+            "f1": "92.47%"
+        },
+        {
+            "variant": "Obfuscated / Leetspeak Attacks",
+            "tested": 50,
+            "detected": 32,
+            "det_rate": "64.0%",
+            "f1": "78.05%"
+        },
+        {
+            "variant": "Multilingual Attacks (Tamil Script)",
+            "tested": 50,
+            "detected": 50,
+            "det_rate": "100.0%",
+            "f1": "100.00%"
+        },
+        {
+            "variant": "Code-Mixed Tanglish Attacks",
+            "tested": 50,
+            "detected": 50,
+            "det_rate": "100.0%",
+            "f1": "100.00%"
+        },
+        {
+            "variant": "Indirect / Contextual Attacks",
+            "tested": 50,
+            "detected": 32,
+            "det_rate": "64.0%",
+            "f1": "78.05%"
+        },
+        {
+            "variant": "Overall Benchmark Aggregate (N=300)",
+            "tested": 300,
+            "detected": 228,
+            "det_rate": "76.0%",
+            "f1": "86.36%"
+        }
+    ],
+    "table_14": [
+        {
+            "run": "Run 1",
+            "precision": "98.61%",
+            "recall": "94.67%",
+            "f1": "96.60%",
+            "latency": "1.675 ms"
+        },
+        {
+            "run": "Run 2",
+            "precision": "98.59%",
+            "recall": "93.33%",
+            "f1": "95.89%",
+            "latency": "0.487 ms"
+        },
+        {
+            "run": "Run 3",
+            "precision": "98.59%",
+            "recall": "93.33%",
+            "f1": "95.89%",
+            "latency": "0.471 ms"
+        },
+        {
+            "run": "Run 4",
+            "precision": "98.59%",
+            "recall": "93.33%",
+            "f1": "95.89%",
+            "latency": "0.476 ms"
+        },
+        {
+            "run": "Run 5",
+            "precision": "98.59%",
+            "recall": "93.33%",
+            "f1": "95.89%",
+            "latency": "0.476 ms"
+        },
+        {
+            "run": "Run 6",
+            "precision": "98.59%",
+            "recall": "93.33%",
+            "f1": "95.89%",
+            "latency": "0.475 ms"
+        },
+        {
+            "run": "Run 7",
+            "precision": "98.59%",
+            "recall": "93.33%",
+            "f1": "95.89%",
+            "latency": "0.468 ms"
+        },
+        {
+            "run": "Run 8",
+            "precision": "98.59%",
+            "recall": "93.33%",
+            "f1": "95.89%",
+            "latency": "0.474 ms"
+        },
+        {
+            "run": "Run 9",
+            "precision": "98.59%",
+            "recall": "93.33%",
+            "f1": "95.89%",
+            "latency": "0.477 ms"
+        },
+        {
+            "run": "Run 10",
+            "precision": "98.59%",
+            "recall": "93.33%",
+            "f1": "95.89%",
+            "latency": "0.470 ms"
+        },
+        {
+            "run": "Mean \u00b1 SD (10 Runs)",
+            "precision": "98.59% \u00b1 0.01%",
+            "recall": "93.47% \u00b1 0.42%",
+            "f1": "95.96% \u00b1 0.22%",
+            "latency": "0.595 \u00b1 0.380 ms"
+        }
+    ]
+}
