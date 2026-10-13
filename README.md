@@ -280,6 +280,8 @@ flowchart TD
 
 ### 🛡️ Defense-in-Depth
 
+<div align="center">
+
 | Layer | Responsibility |
 |---|---|
 | Input validation | Inspect incoming prompt data. |
