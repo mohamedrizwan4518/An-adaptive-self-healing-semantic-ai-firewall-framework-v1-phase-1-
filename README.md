@@ -1,271 +1,267 @@
 <div align="center">
 
-# Aegis AI
-### Adaptive Semantic AI Firewall
-
-**An Adaptive Self-Healing Semantic AI Firewall Framework for Large Language Models**
-
-A team project exploring intelligent detection and mitigation of prompt-based attacks against LLM-powered applications.
+<!-- Animated Header -->
+<img src="https://capsule-render.vercel.app/api?type=waving&color=0:020024,30:090979,65:00D4FF,100:7B2FF7&height=220&section=header&text=AEGIS%20AI&fontSize=75&fontColor=ffffff&animation=fadeIn&fontAlignY=38&desc=Adaptive%20AI%20Security%20%7C%20Detect%20%7C%20Defend%20%7C%20Adapt&descAlignY=60&descSize=17" width="100%"/>
 
 <br>
 
-[![Python](https://img.shields.io/badge/Python-3.x-3776AB?style=flat-square&logo=python&logoColor=white)](https://www.python.org/)
-[![Streamlit](https://img.shields.io/badge/Streamlit-Frontend-FF4B4B?style=flat-square&logo=streamlit&logoColor=white)](https://streamlit.io/)
-[![FastAPI](https://img.shields.io/badge/FastAPI-Backend-009688?style=flat-square&logo=fastapi&logoColor=white)](https://fastapi.tiangolo.com/)
-[![Project](https://img.shields.io/badge/Project-Phase%201-blue?style=flat-square)](#project-information)
-[![Version](https://img.shields.io/badge/Version-1.0-green?style=flat-square)](#project-information)
+<!-- Typing Animation -->
+<a href="https://github.com/mohamedrizwan4518/An-adaptive-self-healing-semantic-ai-firewall-framework-v1-phase-1-">
+<img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=21&duration=3000&pause=1000&color=00D4FF&center=true&vCenter=true&width=750&lines=Securing+the+Next+Generation+of+AI;Detecting+Prompt-Based+Attacks;Semantic+Analysis+%7C+Threat+Detection;Building+Safer+Large+Language+Models" alt="Animated typing introduction"/>
+</a>
+
+<br><br>
+
+<!-- Project Badges -->
+<img src="https://img.shields.io/badge/Domain-AI%20Cybersecurity-7B2FF7?style=for-the-badge&logo=probot&logoColor=white"/>
+<img src="https://img.shields.io/badge/Focus-LLM%20Security-00BFFF?style=for-the-badge&logo=openai&logoColor=white"/>
+<img src="https://img.shields.io/badge/Interface-Streamlit-FF4B4B?style=for-the-badge&logo=streamlit&logoColor=white"/>
+<img src="https://img.shields.io/badge/Language-Python-3776AB?style=for-the-badge&logo=python&logoColor=white"/>
 
 <br>
 
-[Overview](#1-project-overview) ·
-[Features](#2-key-features) ·
-[Architecture](#3-system-architecture) ·
-[Screenshots](#4-application-screenshots) ·
-[Installation](#7-getting-started) ·
-[Testing](#8-testing-and-validation) ·
-[Team](#11-project-team)
+<img src="https://img.shields.io/badge/Project-Aegis%20AI-111827?style=flat-square"/>
+<img src="https://img.shields.io/badge/Phase-1-00C853?style=flat-square"/>
+<img src="https://img.shields.io/badge/Status-Development-FFA000?style=flat-square"/>
+<img src="https://img.shields.io/badge/Institution-Achariya%20College-7B2FF7?style=flat-square"/>
+
+<br><br>
+
+### 🛡️ Intelligent Defence for Large Language Models
+
+*A semantic AI firewall framework designed to detect and help mitigate prompt-based attacks through layered security mechanisms.*
+
+<br>
+
+<a href="#-about-the-project">
+<img src="https://img.shields.io/badge/Explore%20the%20Project-00D4FF?style=for-the-badge&logo=github&logoColor=black"/>
+</a>
+<a href="#-getting-started">
+<img src="https://img.shields.io/badge/Run%20Locally-7B2FF7?style=for-the-badge&logo=python&logoColor=white"/>
+</a>
 
 </div>
 
 ---
 
-# 1. Project Overview
+<div align="center">
 
-## About Aegis AI
+## ⚡ THE MISSION
 
-Large Language Models (LLMs) are increasingly used in conversational assistants, intelligent applications, and automated workflows. However, applications using these models can be exposed to prompt injection, jailbreak attempts, system-prompt extraction, role manipulation, and other adversarial inputs.
+### Detect threats. Protect AI. Build trust.
 
-**Aegis AI** is a cybersecurity project that explores a layered security framework for inspecting incoming prompts, identifying potentially suspicious patterns, evaluating risks, and applying appropriate security decisions.
+</div>
 
-The project combines lexical threat detection, semantic analysis, prompt sanitization, threat memory, and a Security Operations Center (SOC) dashboard.
+As Large Language Models (LLMs) become increasingly useful, they also face security risks such as prompt injection, malicious instructions, and attempts to bypass model safeguards.
 
-It also explores multilingual prompt-security scenarios involving English, Tamil, and Tanglish.
+**Aegis AI** explores an adaptive, self-healing semantic firewall approach for identifying suspicious prompts and supporting security-focused monitoring.
 
-### Project Objectives
+The project combines prompt detection, semantic analysis, sanitization, threat tracking, and a Security Operations Center (SOC)-style dashboard in a single application.
 
-- Identify potentially malicious prompts using configured detection rules.
-- Analyze suspicious inputs using lexical and semantic techniques.
-- Detect prompt injection, jailbreak, and system-prompt extraction attempts.
-- Evaluate risks and apply configured security decisions.
-- Maintain records of detected threats for further analysis.
-- Explore adaptive threat memory for recognizing recurring patterns.
-- Provide a dashboard for monitoring security events.
-- Evaluate prompt-security behavior across different languages.
-
-### Project Scope
-
-Aegis AI is a development and research prototype. Its effectiveness depends on the implemented detection methods, configuration, and evaluation data.
-
-The project is intended for experimentation, demonstration, and further development. It should not be considered a fully validated production security solution.
+> **Our vision:** Make AI interactions safer through intelligent detection, transparent monitoring, and adaptable security mechanisms.
 
 ---
 
-# 2. Key Features
+## 📑 Navigation
 
-## 2.1 Lexical Threat Detection
-
-The lexical detection component uses configured patterns and rules to identify potentially suspicious prompt content.
-
-Threat categories of interest include:
-
-- Prompt injection
-- Jailbreak attempts
-- System-prompt extraction
-- Role manipulation
-- Safety-policy bypass attempts
-
-Detection coverage depends on the rules implemented in the application.
-
-## 2.2 Semantic Prompt Analysis
-
-The semantic analysis component explores text-similarity techniques to identify potentially suspicious prompts that may use different wording from known examples.
-
-Its intended purposes include:
-
-- Analyzing prompt representations.
-- Comparing input against configured threat patterns.
-- Supporting risk assessment.
-- Investigating paraphrased attack scenarios.
-
-Semantic analysis can produce false positives and false negatives. Its effectiveness must be established through testing.
-
-## 2.3 Prompt Sanitization
-
-The prompt sanitization component provides an additional processing stage for supported security workflows.
-
-Depending on the configured implementation, this stage may inspect suspicious input and apply appropriate transformations before further processing.
-
-Sanitization should not be treated as a guarantee that all malicious intent has been removed.
-
-## 2.4 Adaptive Threat Memory
-
-Threat memory maintains threat-related records that can support the analysis of recurring suspicious patterns.
-
-The project explores how previously observed threats can contribute to subsequent detection and security analysis.
-
-Persistent threat records alone do not establish that a detection model is automatically retrained or improved.
-
-## 2.5 Security Operations Center Dashboard
-
-The SOC dashboard provides an interface for reviewing available security information and administrative workflows.
-
-Depending on the enabled modules, these may include:
-
-- Security-event monitoring
-- Threat-category summaries
-- Incident information
-- User-management controls
-- Threat analytics
-- Security-record exports
-
-## 2.6 Interactive Security Testing
-
-The testing interface provides a way to experiment with prompts and inspect their security outcomes.
-
-Suggested evaluation categories include:
-
-- Benign prompts
-- Prompt injection
-- Jailbreak attempts
-- System-prompt extraction
-- Role manipulation
-- Multilingual prompts
-- Tamil and Tanglish examples
-
-## 2.7 Authentication and Access Control
-
-The application includes an authentication interface and role-oriented workflows.
-
-Authentication and authorization must be reviewed independently before deploying the application publicly.
+| Section | Description |
+|:---|:---|
+| 🎯 [Project Overview](#-about-the-project) | The problem and our approach |
+| ✨ [Key Features](#-key-features) | Security and monitoring capabilities |
+| 🏗️ [Architecture](#️-system-architecture) | How the components are organized |
+| 🖥️ [Screenshots](#️-application-preview) | Visual application preview |
+| 🧰 [Technology Stack](#-technology-stack) | Tools and technologies |
+| 🚀 [Installation](#-getting-started) | Run the application locally |
+| 🧪 [Testing](#-testing) | Run the available tests |
+| 🔐 [Security](#-security-considerations) | Current limitations and safe use |
+| 🗺️ [Roadmap](#-future-roadmap) | Potential future improvements |
+| 👥 [Team](#-project-team) | Project contributors |
 
 ---
 
-# 3. System Architecture
+## 🎯 About the Project
 
-Aegis AI explores a layered processing workflow in which incoming prompts are inspected before reaching the configured language-model processing stage.
+### Research Title
 
-```mermaid
-flowchart TD
-    A["User Prompt"] --> B["Input Validation"]
+**An Adaptive Self-Healing Semantic AI Firewall Framework for Real-Time Detection and Mitigation of Prompt-Based Attacks in Large Language Models**
 
-    B --> C["Lexical Threat Detection"]
+### The Problem
 
-    C --> D["Semantic Prompt Analysis"]
+Traditional application security measures do not automatically address every risk introduced by natural-language interactions with AI systems.
 
-    D --> E["Risk Evaluation"]
+A malicious or manipulated prompt may attempt to:
 
-    E --> F{"Security Decision"}
+- Override the intended instructions of an AI application.
+- Bypass established safety restrictions.
+- Manipulate model behaviour through deceptive language.
+- Introduce instructions that conflict with the original task.
+- Exploit weaknesses in how an application processes user input.
 
-    F -->|Allow| G["Prompt Processing"]
+### Our Approach
 
-    F -->|Block| H["Reject Request"]
+Aegis AI is designed around a layered security workflow that brings together prompt inspection, semantic analysis, sanitization, threat-related components, and dashboard monitoring.
 
-    F -->|Review or Sanitize| I["Additional Security Handling"]
+The framework aims to provide a foundation for detecting suspicious input and making security events easier to inspect.
 
-    I --> J{"Policy Result"}
+<div align="center">
 
-    J -->|Approved| G
-    J -->|Rejected| H
+| 🧠 Semantic Analysis | 🛡️ Threat Detection | 📊 Security Monitoring |
+|:---:|:---:|:---:|
+| Examine prompt meaning | Identify suspicious input | Present security information |
+| Support threat classification | Apply configured detection logic | Review activity through a dashboard |
 
-    G --> K["LLM Integration, If Configured"]
-
-    K --> L["Response Handling"]
-
-    C -.-> M["Threat Records"]
-    D -.-> M
-    E -.-> M
-    H -.-> M
-
-    M --> N["SOC Dashboard"]
-```
-
-### Architecture Components
-
-| Component | Responsibility |
-|---|---|
-| Input validation | Inspect incoming prompt data. |
-| Lexical detection | Match configured suspicious patterns. |
-| Semantic analysis | Evaluate similarity to threat patterns. |
-| Risk evaluation | Apply configured security decisions. |
-| Prompt sanitization | Transform input when supported by the policy. |
-| Threat memory | Maintain relevant threat-related records. |
-| SOC dashboard | Display available security information. |
-
-**Note:** This diagram represents the conceptual architecture. The actual processing order, integrations, and enforcement behavior depend on the implementation.
+</div>
 
 ---
 
-# 4. Application Screenshots
-
-The following screenshots demonstrate the application's interface and selected workflows.
+## ✨ Key Features
 
 <table>
 <tr>
-<td width="50%" align="center">
+<td width="50%" valign="top">
 
-### SOC Dashboard
+### 🧠 Semantic Detection
 
-<img src="assets/screenshots/soc_dashboard_overview.png" alt="Aegis AI SOC Dashboard" width="100%">
+Designed to examine the meaning of incoming prompts and support the identification of suspicious instructions.
 
-Security monitoring and incident overview.
+### 🧹 Prompt Sanitization
 
-</td>
-<td width="50%" align="center">
+Includes a sanitization component intended to help handle potentially unsafe prompt content.
 
-### Security Testing Lab
+### 🚨 Threat Monitoring
 
-<img src="assets/screenshots/testing_lab_pipeline_full.png" alt="Aegis AI Security Testing Lab" width="100%">
-
-Prompt inspection and security pipeline visualization.
+Includes threat-related components for processing and tracking security events.
 
 </td>
-</tr>
-<tr>
-<td width="50%" align="center">
+<td width="50%" valign="top">
 
-### Login Interface
+### 📊 SOC Dashboard
 
-<img src="assets/screenshots/login_screen.png" alt="Aegis AI Login Interface" width="100%">
+Provides a security-focused interface for viewing available monitoring and analytics information.
 
-Authentication and role-oriented workflows.
+### 📝 Attack Logging
 
-</td>
-<td width="50%" align="center">
+Includes an attack-logging component for recording relevant security events.
 
-### Conversational Interface
+### 💬 Chat Interface
 
-<img src="assets/screenshots/user_chat_view.png" alt="Aegis AI Chat Interface" width="100%">
-
-Conversational interaction and security inspection telemetry.
+Provides a user-facing interface for interacting with the application's configured AI workflow.
 
 </td>
 </tr>
 </table>
 
-*Screenshots demonstrate the application interface. Displayed metrics and individual detection outcomes should not be interpreted as independently validated security benchmarks.*
+> **Implementation note:** These features describe the project's intended components and application structure. Their actual effectiveness depends on the implementation, configuration, and testing performed.
 
 ---
 
-# 5. Technology Stack
+## 🏗️ System Architecture
+
+The following diagram illustrates the **conceptual workflow** of Aegis AI. It is not a claim that every component has been independently validated in a production environment.
+
+```mermaid
+flowchart TD
+    A["👤 User Prompt"] --> B["🛡️ Prompt Inspection"]
+
+    B --> C["🧠 Semantic Detection"]
+    C --> D{"🚨 Suspicious Input?"}
+
+    D -->|Yes| E["⛔ Configured Mitigation"]
+    D -->|No| F["🧹 Prompt Sanitization"]
+
+    F --> G["🤖 Configured LLM Workflow"]
+
+    E --> H["📝 Security Event Logging"]
+    G --> H
+
+    H --> I["📊 SOC Dashboard"]
+    H --> J["🔎 Threat Analysis"]
+
+    J -. "Potential future feedback loop" .-> B
+
+    style A fill:#102A43,stroke:#00D4FF,color:#FFFFFF
+    style B fill:#172554,stroke:#38BDF8,color:#FFFFFF
+    style C fill:#312E81,stroke:#A78BFA,color:#FFFFFF
+    style D fill:#713F12,stroke:#FBBF24,color:#FFFFFF
+    style E fill:#7F1D1D,stroke:#F87171,color:#FFFFFF
+    style F fill:#064E3B,stroke:#34D399,color:#FFFFFF
+    style G fill:#164E63,stroke:#22D3EE,color:#FFFFFF
+    style H fill:#27272A,stroke:#A1A1AA,color:#FFFFFF
+    style I fill:#312E81,stroke:#C4B5FD,color:#FFFFFF
+    style J fill:#164E63,stroke:#67E8F9,color:#FFFFFF
+```
+
+### Security Workflow
+
+1. **Input:** A user submits a prompt through the application.
+2. **Inspection:** The configured security components inspect the prompt.
+3. **Detection:** The detection logic evaluates whether the input appears suspicious.
+4. **Handling:** The application follows its configured handling or mitigation path.
+5. **Monitoring:** Relevant activity can be presented through the available logging and dashboard components.
+
+The exact behaviour depends on the implemented detection rules, backend logic, and configured LLM integration.
+
+---
+
+## 🖥️ Application Preview
+
+The repository includes the following application screenshots.
+
+<div align="center">
+
+### 📊 SOC Dashboard
+
+<img src="assets/screenshots/soc_dashboard_overview.png" alt="Aegis AI SOC Dashboard" width="95%"/>
+
+*Security monitoring interface.*
+
+<br>
+
+### 🔬 Testing Lab
+
+<img src="assets/screenshots/testing_lab_pipeline_full.png" alt="Aegis AI Testing Lab Pipeline" width="95%"/>
+
+*Testing interface and displayed processing workflow.*
+
+<br>
+
+### 🔐 Login Interface
+
+<img src="assets/screenshots/login_screen.png" alt="Aegis AI Login Screen" width="75%"/>
+
+*Application login interface.*
+
+<br>
+
+### 💬 User Chat Interface
+
+<img src="assets/screenshots/user_chat_view.png" alt="Aegis AI User Chat Interface" width="75%"/>
+
+*User-facing chat interface.*
+
+</div>
+
+---
+
+## 🧰 Technology Stack
+
+<div align="center">
 
 | Technology | Purpose |
-|---|---|
-| Python | Core application and security logic |
-| Streamlit | User interface and dashboard |
-| FastAPI | Backend API, where configured |
-| Scikit-learn | Text-analysis techniques, where implemented |
-| Pandas | Data processing, where implemented |
-| JSON | Local application data and records |
-| Git | Version control |
-| GitHub | Source-code hosting |
+|:---|:---|
+| <img src="https://img.shields.io/badge/Python-3776AB?style=flat-square&logo=python&logoColor=white"/> | Application and security logic |
+| <img src="https://img.shields.io/badge/Streamlit-FF4B4B?style=flat-square&logo=streamlit&logoColor=white"/> | Interactive user interface |
+| <img src="https://img.shields.io/badge/LLM%20Integration-412991?style=flat-square&logo=openai&logoColor=white"/> | Configured language-model workflow |
+| <img src="https://img.shields.io/badge/Git%20%26%20GitHub-181717?style=flat-square&logo=github&logoColor=white"/> | Version control and source hosting |
+| <img src="https://img.shields.io/badge/Markdown-000000?style=flat-square&logo=markdown&logoColor=white"/> | Project documentation |
 
-Additional dependencies and external integrations depend on the application configuration and `requirements.txt`.
+</div>
+
+The repository also contains dedicated modules for prompt detection, semantic detection, sanitization, threat tracking, authentication, analytics, and logging.
 
 ---
 
-# 6. Project Structure
-
-The project separates the user interface, backend services, security components, application data, and tests into dedicated directories.
+## 📂 Project Structure
 
 ```text
 Aegis-AI-Phase1-Version1/
@@ -293,7 +289,6 @@ Aegis-AI-Phase1-Version1/
 │   └── user_manager.py
 │
 ├── data/
-│
 ├── experiments/
 │
 ├── frontend/
@@ -318,324 +313,247 @@ Aegis-AI-Phase1-Version1/
 └── streamlit_app.py
 ```
 
-### Directory and File Descriptions
-
-| Directory or File | Description |
-|---|---|
-| `.streamlit/` | Streamlit application configuration. |
-| `assets/screenshots/` | Application screenshots used in documentation. |
-| `backend/` | Backend services, authentication, logging, and management modules. |
-| `data/` | Directory for application data and security records. |
-| `experiments/` | Directory for experimental work and evaluation. |
-| `frontend/` | Streamlit interface and dashboard. |
-| `security/` | Prompt detection, sanitization, semantic analysis, and threat memory. |
-| `tests/` | Automated tests. |
-| `.env.example` | Example environment-variable configuration. |
-| `.gitignore` | Specifies files and directories excluded from Git. |
-| `LICENSE` | Project license terms. |
-| `README.md` | Project documentation. |
-| `requirements.txt` | Python package dependencies. |
-| `run.bat` | Windows Command Prompt startup script. |
-| `run.ps1` | Windows PowerShell startup script. |
-| `streamlit_app.py` | Streamlit application entry point. |
-
-*The directory tree reflects the documented project layout. Keep it synchronized with the actual repository. Empty directories may not appear on GitHub.*
-
 ---
 
-# 7. Getting Started
+## 🚀 Getting Started
 
-Follow these steps to set up Aegis AI locally.
+Follow these steps to run Aegis AI on your local machine.
 
-## Prerequisites
+### Prerequisites
 
-Before starting, install:
+Install the following before starting:
 
-- Python compatible with the project dependencies.
+- Python compatible with the project's dependencies.
 - Git.
-- Visual Studio Code or another code editor.
-- PowerShell, Command Prompt, or another compatible terminal.
+- A terminal such as PowerShell, Command Prompt, or Bash.
 
-## Step 1: Clone the Repository
+### Step 1 — Clone the Repository
 
 ```bash
 git clone https://github.com/mohamedrizwan4518/An-adaptive-self-healing-semantic-ai-firewall-framework-v1-phase-1-.git
 ```
 
-Navigate to the cloned directory:
+Move into the project directory:
 
 ```bash
 cd An-adaptive-self-healing-semantic-ai-firewall-framework-v1-phase-1-
 ```
 
-## Step 2: Create a Virtual Environment
+### Step 2 — Create a Virtual Environment
 
-```bash
-python -m venv .venv
-```
-
-### Windows PowerShell
+**Windows:**
 
 ```powershell
-.\.venv\Scripts\Activate.ps1
+python -m venv .venv
+.venv\Scripts\Activate.ps1
 ```
 
-### Windows Command Prompt
+If you are using Command Prompt instead of PowerShell:
 
 ```bat
 .venv\Scripts\activate.bat
 ```
 
-### Linux or macOS
+**Linux or macOS:**
 
 ```bash
+python3 -m venv .venv
 source .venv/bin/activate
 ```
 
-## Step 3: Install Dependencies
+### Step 3 — Install Dependencies
 
 ```bash
 python -m pip install --upgrade pip
 pip install -r requirements.txt
 ```
 
-## Step 4: Configure Environment Variables
+### Step 4 — Configure Environment Variables
 
-If the application requires environment variables, create a local `.env` file from the example.
+If your configured model provider or another component requires environment variables:
 
-### Windows PowerShell
+1. Open `.env.example`.
+2. Review the required configuration values.
+3. Create a local `.env` file if the application expects one.
+4. Add your own valid credentials and configuration.
 
-```powershell
-Copy-Item .env.example .env
-```
+**Never commit API keys, passwords, access tokens, or other secrets to GitHub.**
 
-### Linux or macOS
+Do not add credentials unless they are required by your configured implementation.
 
-```bash
-cp .env.example .env
-```
+### Step 5 — Launch the Application
 
-Open `.env` and configure the values required by the application.
-
-If an external LLM provider is configured, use the API-key variable expected by the implementation.
-
-**Security reminder:** Never commit real API keys, passwords, access tokens, or production credentials to GitHub.
-
-## Step 5: Launch the Application
-
-### Windows PowerShell
-
-If the startup script is configured for your environment:
-
-```powershell
-.\run.ps1
-```
-
-Alternatively, launch Streamlit directly:
+Try the main Streamlit entry point:
 
 ```bash
 streamlit run streamlit_app.py
 ```
 
-When startup succeeds, Streamlit typically displays a local address similar to:
+If your project is configured to use the frontend entry point instead, run:
+
+```bash
+streamlit run frontend/app.py
+```
+
+Use the entry point appropriate for your implementation.
+
+Streamlit normally displays a local address in the terminal, such as:
 
 ```text
 http://localhost:8501
 ```
 
-Open that address in your browser.
-
-The backend API and its documentation are available only if the backend starts successfully.
+Open the displayed address in your browser.
 
 ---
 
-# 8. Testing and Validation
+## 🧪 Testing
 
-The repository includes a test module at:
+The repository includes a test file at:
 
 ```text
 tests/test_aegis.py
 ```
 
-Run the tests from the project root:
+From the project root, try:
 
 ```bash
-python -m unittest tests.test_aegis -v
+python -m unittest discover -s tests -v
 ```
 
-Review the terminal output to determine which tests passed, failed, or encountered errors.
+Review the results and resolve any failing tests.
 
-## Recommended Evaluation Metrics
+### Recommended Security Evaluation
 
-| Metric | Purpose |
-|---|---|
-| Precision | Measures how many flagged prompts are malicious within the labeled evaluation set. |
-| Recall | Measures how many malicious prompts are detected. |
-| F1-score | Combines precision and recall into one measure. |
-| False-positive rate | Measures benign prompts incorrectly flagged. |
-| Detection latency | Measures the time required to inspect a prompt. |
-| Language-specific performance | Evaluates behavior across English, Tamil, and Tanglish. |
+Before describing Aegis AI as production-ready, evaluate it against:
 
-### Recommended Validation Process
+- Direct prompt-injection attempts.
+- Indirect or disguised malicious instructions.
+- Benign prompts that should not be blocked.
+- Attempts to bypass configured detection rules.
+- Incorrectly blocked legitimate requests.
+- Detection latency and resource consumption.
+- Logging accuracy and sensitive-data handling.
 
-1. Prepare a documented collection of benign and adversarial prompts.
-2. Label the examples before evaluating the detector.
-3. Run the same test cases against the implementation.
-4. Record false positives, false negatives, and processing time.
-5. Document the test environment and results.
-6. Repeat the evaluation after changing detection rules or models.
+Record the test cases, expected outcomes, actual outcomes, and measured results.
 
-Do not report accuracy percentages or claim that every test passes unless the results have been measured and verified.
+**Do not report detection accuracy, attack-blocking rates, or performance improvements without supporting experimental evidence.**
 
 ---
 
-# 9. Security Considerations
+## 🔐 Security Considerations
 
-Aegis AI is a prototype intended for development, experimentation, and demonstration.
+Aegis AI is an experimental project intended for development and research.
 
-It should not be treated as the sole security boundary for a production LLM application.
+Please keep the following in mind:
 
-Before production deployment, review the following areas:
+- A detection mechanism may produce false positives and false negatives.
+- Semantic similarity alone cannot guarantee that a prompt is safe or malicious.
+- Prompt sanitization does not replace secure application design.
+- A firewall should not be treated as a substitute for the LLM provider's safety controls.
+- Authentication, access control, and logging should be reviewed before deployment.
+- API credentials and other secrets must be stored securely.
+- Security decisions should be tested against a diverse collection of benign and malicious inputs.
 
-| Security Area | Considerations |
-|---|---|
-| Authentication | Password handling and session management. |
-| Authorization | Server-side permission checks for privileged actions. |
-| Prompt security | Direct and indirect prompt-injection defenses. |
-| Secrets | API-key and credential protection. |
-| Input handling | Validation of untrusted input. |
-| Audit logging | Integrity of records and protection of sensitive data. |
-| Abuse prevention | Rate limits and request controls. |
-| Threat memory | Integrity and safe handling of stored records. |
-| Validation | Testing against realistic attack scenarios. |
+### Important
 
-### Demo Credentials
-
-If the application contains demonstration accounts, use them only in an isolated demo environment.
-
-Before exposing the application publicly:
-
-- Replace default administrator credentials.
-- Verify authentication and authorization.
-- Remove sensitive local data.
-- Review API-key handling.
-- Check whether administrative endpoints are adequately protected.
-
-A security dashboard alone does not guarantee that the underlying application is secure.
+**Do not rely on this project as the sole security control for a production AI system.** Validate its implementation and effectiveness before using it to protect real users or sensitive information.
 
 ---
 
-# 10. Deployment
+## 🗺️ Future Roadmap
 
-The repository includes the Streamlit entry point:
+The following are potential improvements, not claims of completed functionality.
 
-```text
-streamlit_app.py
-```
+<table>
+<tr>
+<td width="50%" valign="top">
 
-Streamlit Community Cloud may be suitable for hosting the interface, depending on the application's requirements.
+### 🧠 Detection Improvements
 
-### Pre-Deployment Checklist
+- Expand prompt-injection test coverage.
+- Evaluate semantic detection thresholds.
+- Reduce false-positive and false-negative rates.
+- Add repeatable evaluation datasets.
 
-- [ ] Confirm that the application runs locally.
-- [ ] Verify dependency compatibility.
-- [ ] Configure secrets through the hosting platform.
-- [ ] Check backend startup requirements.
-- [ ] Review file-system and data-persistence behavior.
-- [ ] Test authentication and access controls.
-- [ ] Verify screenshot and resource paths.
-- [ ] Test the deployed application.
+</td>
+<td width="50%" valign="top">
 
-A successful local run does not guarantee that the application will work identically in a hosted environment.
+### 📊 Monitoring Improvements
 
-Backend processes, external model integrations, persistent storage, and hosting restrictions must be evaluated separately.
+- Add richer security-event visualizations.
+- Improve event filtering and investigation.
+- Track detection latency and system performance.
+- Provide clearer security-event explanations.
 
-Do not expose demonstration credentials or sensitive local data in a public deployment.
+</td>
+</tr>
+<tr>
+<td width="50%" valign="top">
 
----
+### 🔄 Adaptive Security
 
-# 11. Future Roadmap
+- Evaluate feedback-driven rule updates.
+- Investigate safe threat-memory management.
+- Add controlled regression testing for updated rules.
 
-The following items represent potential improvements for future development.
+</td>
+<td width="50%" valign="top">
 
-- [ ] Expand the labeled prompt-attack dataset.
-- [ ] Evaluate precision, recall, and F1-score.
-- [ ] Measure false-positive rates and detection latency.
-- [ ] Improve Tamil and Tanglish evaluation coverage.
-- [ ] Enhance explanations for security decisions.
-- [ ] Add regression tests for known attack patterns.
-- [ ] Strengthen authentication and authorization.
-- [ ] Improve security-event reporting.
-- [ ] Evaluate concurrent-request performance.
-- [ ] Document threat models and limitations.
-- [ ] Validate deployment and storage requirements.
+### 🚀 Deployment
 
-These items are proposed future enhancements, not claims that the functionality is already implemented.
+- Improve configuration management.
+- Strengthen authentication and access control.
+- Add automated testing to the development workflow.
+- Evaluate deployment and operational requirements.
 
----
-
-# 12. Project Team
-
-## Team Aegis AI
-
-Aegis AI is a collaborative team project focused on exploring security techniques for Large Language Model applications.
-
-### Team Members
-
-| No. | Name |
-|:---:|---|
-| 1 | **HARIHARAN V.S.** |
-| 2 | **RASHIKA V.** |
-| 3 | **RUBINI T.** |
-
-### Project Information
-
-| Category | Details |
-|---|---|
-| Project Name | Aegis AI — Adaptive Semantic AI Firewall |
-| Project Type | Team Project |
-| Project Phase | Phase 1 |
-| Version | 1.0 |
-| Domain | Artificial Intelligence and Cybersecurity |
-| Institution | Achariya College of Engineering and Technology |
-| Location | Puducherry, India |
-
-### Team Approach
-
-The project brings together collaborative problem-solving, software development, security experimentation, and documentation.
-
-The team is exploring how layered detection, semantic analysis, and risk-based decisions can contribute to the protection of applications powered by Large Language Models.
-
-Individual responsibilities can be documented once the team's roles have been finalized.
+</td>
+</tr>
+</table>
 
 ---
 
-# 13. Project Repository
-
-**GitHub Repository:**
-
-[An-adaptive-self-healing-semantic-ai-firewall-framework-v1-phase-1-](https://github.com/mohamedrizwan4518/An-adaptive-self-healing-semantic-ai-firewall-framework-v1-phase-1-)
-
-The repository contains the project source code, configuration, documentation, and available tests.
-
----
-
-# 14. License
-
-This repository contains a [`LICENSE`](LICENSE) file.
-
-Refer to that file for the applicable license terms.
-
----
+## 👥 Project Team
 
 <div align="center">
 
-**AEGIS AI — Adaptive Semantic AI Firewall**
+### Built through collaboration and research
 
-*Detect suspicious inputs. Evaluate risks. Strengthen defenses.*
+</div>
 
-**Team Aegis AI**
+| Team Member | Institution |
+|:---|:---|
+| **HARIHARAN V.S.** | Achariya College of Engineering and Technology |
+| **RASHIKA V.** | Achariya College of Engineering and Technology |
+| **RUBINI T.** | Achariya College of Engineering and Technology |
 
-HARIHARAN V.S. · RASHIKA V. · RUBINI T.
+**Institution:** Achariya College of Engineering and Technology  
+**Location:** Puducherry, India
+
+---
+
+## 🌟 Why This Project Matters
+
+AI security is not only about detecting a malicious string. It also involves understanding the context of a request, applying appropriate controls, monitoring suspicious behaviour, and continuously evaluating whether those controls work as intended.
+
+Aegis AI is our exploration of how these ideas can come together in a practical, security-focused application.
+
+Our goal is to develop the project through implementation, testing, evaluation, and continuous improvement.
+
+<div align="center">
+
+### 🛡️ AEGIS AI
+
+**Detect intelligently. Defend responsibly. Improve continuously.**
+
+<br>
+
+<a href="https://github.com/mohamedrizwan4518/An-adaptive-self-healing-semantic-ai-firewall-framework-v1-phase-1-">
+<img src="https://img.shields.io/badge/Explore%20Source%20Code-GitHub-181717?style=for-the-badge&logo=github&logoColor=white"/>
+</a>
+
+<br><br>
+
+<img src="https://capsule-render.vercel.app/api?type=waving&color=0:7B2FF7,40:00D4FF,100:020024&height=120&section=footer" width="100%"/>
 
 </div>
