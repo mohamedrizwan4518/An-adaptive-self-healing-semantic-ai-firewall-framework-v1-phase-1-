@@ -1,193 +1,512 @@
-# 🛡️ Aegis AI — Enterprise AI Firewall & Autonomous SOC
+# 🛡️ Aegis AI — Adaptive Semantic AI Firewall
 
-**Aegis AI** is an enterprise-grade Autonomous Cybersecurity Firewall and Security Operations Center (SOC) designed to protect Large Language Models (LLMs) from real-time adversarial prompt injection, jailbreaks, data exfiltration, system prompt leaks, and role manipulation across multilingual vectors (English, Tamil, and Tanglish).
+### An Adaptive Self-Healing Semantic AI Firewall Framework for Large Language Models
 
----
+<p align="center">
+  <strong>Detect. Analyze. Defend. Adapt.</strong>
+  <br>
+  A security-focused project exploring intelligent detection and mitigation of prompt-based attacks against Large Language Models (LLMs).
+</p>
 
-## 📸 System Screenshots
-
-| **Enterprise SOC Dashboard Overview** | **Interactive 5-Stage Security Pipeline** |
-| :---: | :---: |
-| ![SOC Dashboard](assets/screenshots/soc_dashboard_overview.png) | ![Security Pipeline Lab](assets/screenshots/testing_lab_pipeline_full.png) |
-
-| **Authentication & Role-Based Access** | **User Conversational Inspection Telemetry** |
-| :---: | :---: |
-| ![Login Screen](assets/screenshots/login_screen.png) | ![User Chat View](assets/screenshots/user_chat_view.png) |
-
----
-
-## 🌟 Key Architecture & Capabilities
-
-1. **Dual-Engine Threat Detection Pipeline**:
-   - **Lexical Gatekeeper**: High-throughput rule matcher covering 80+ known adversarial signatures.
-   - **Semantic Cosine Engine**: Sub-word N-gram TF-IDF & Neural Cosine similarity detector capable of identifying zero-day paraphrased and transliterated attacks without OS DLL restrictions.
-2. **Adaptive Self-Healing Threat Memory**:
-   - Autonomously stores intercepted adversarial patterns into persistent memory, continuously hardening the firewall against repeat vectors.
-3. **In-Flight Prompt Neutralization (Sanitizer)**:
-   - Sanitizes and neutralizes medium-risk prompts before reaching the model, transforming malicious intent into safe inquiries.
-4. **Interactive Security Testing Lab**:
-   - 1-Click test battery covering all primary LLM attack surfaces (Prompt Injection, Jailbreak/DAN, System Prompt Extraction, Role Manipulation, Safety Bypass, Multilingual Tamil/Tanglish, and Benign Prompts).
-   - Real-time 5-stage pipeline breakdown visualizer (`Lexical Gate` ➔ `Semantic Vector` ➔ `Sanitizer Engine` ➔ `Decision Gate` ➔ `Output Verdict`).
-5. **Next-Gen Cybersecurity SOC Dashboard**:
-   - **Level 1 (Threat Triage)**: Real-time incident feed with 1-click administrative actions (Warn, Block, Blacklist, Restore).
-   - **Level 2 & 4 (Threat Intelligence)**: Executive KPI cards, categorical attack distribution, adversarial account metrics, and CSV compliance export.
-   - **Level 3 & 5 (Security Ledger & User Control)**: Comprehensive user directory, risk scores (0–100), warning counters, and access policy enforcement.
+<p align="center">
+  <img src="https://img.shields.io/badge/Project-Phase%201-blue" alt="Project Phase">
+  <img src="https://img.shields.io/badge/Version-1.0-green" alt="Version">
+  <img src="https://img.shields.io/badge/Python-3.x-blue?logo=python" alt="Python">
+  <img src="https://img.shields.io/badge/Interface-Streamlit-FF4B4B?logo=streamlit" alt="Streamlit">
+  <img src="https://img.shields.io/badge/API-FastAPI-009688?logo=fastapi" alt="FastAPI">
+  <img src="https://img.shields.io/badge/Status-Development-orange" alt="Project Status">
+</p>
 
 ---
 
-## ☁️ Deploying to Streamlit Community Cloud
+## 📌 Overview
 
-Aegis AI is preconfigured for single-click deployment on [Streamlit Community Cloud](https://share.streamlit.io):
+**Aegis AI** is a cybersecurity project designed to provide a protective layer between users and Large Language Models (LLMs).
 
-1. **Push this repository to GitHub** (see [GitHub Setup](#-pushing-to-github)).
-2. Log in to [Streamlit Community Cloud](https://share.streamlit.io/) and click **New app**.
-3. Select your repository, branch (`main`), and set **Main file path** to:
-   ```text
-   streamlit_app.py
-   ```
-4. Click **Advanced settings...** and add your Groq API key to **Secrets**:
-   ```toml
-   GROQ_API_KEY = "your_actual_groq_api_key_here"
-   ```
-5. Click **Deploy!** — The application automatically boots the background FastAPI security engine and mounts the SOC Dashboard in a unified environment.
+The framework focuses on identifying potentially malicious prompts, evaluating security risks, and applying appropriate decisions before requests reach the language model.
+
+It explores a combination of lexical pattern matching, semantic similarity analysis, prompt sanitization, threat memory, and security monitoring through a dashboard.
+
+The project also explores multilingual prompt analysis, including English, Tamil, and Tanglish.
+
+### 🎯 Project Objectives
+
+- Detect prompt injection and jailbreak attempts.
+- Identify potential system-prompt extraction and role-manipulation attacks.
+- Analyze suspicious prompts using lexical and semantic techniques.
+- Apply risk-based decisions to incoming prompts.
+- Maintain a record of detected threats.
+- Explore adaptive threat memory for recognizing recurring attack patterns.
+- Provide a dashboard for monitoring security events and user activity.
+
+> **Project scope:** Aegis AI is a prototype intended for development, demonstration, and evaluation. Its detection results depend on the implemented rules, models, configuration, and test data. It should not be considered a complete replacement for production security controls.
 
 ---
 
-## 🚀 Local Quick Start
+## 📸 Application Screenshots
 
-### 1. Clone & Setup Environment
-```bash
-git clone https://github.com/<your-username>/<your-repo-name>.git
-cd <your-repo-name>
+The following screenshots demonstrate the application's interface and selected security workflows.
 
-# Create and activate virtual environment
-python -m venv venv
-# Windows:
-.\venv\Scripts\activate
-# Linux / macOS:
-source venv/bin/activate
+| SOC Dashboard | Security Testing Lab |
+|:---:|:---:|
+| ![SOC Dashboard](assets/screenshots/soc_dashboard_overview.png) | ![Security Testing Lab](assets/screenshots/testing_lab_pipeline_full.png) |
+| *Security monitoring interface* | *Prompt inspection and pipeline visualization* |
 
-# Install dependencies
-pip install -r requirements.txt
+| Authentication Interface | Conversational Inspection Interface |
+|:---:|:---:|
+| ![Login Screen](assets/screenshots/login_screen.png) | ![User Chat Interface](assets/screenshots/user_chat_view.png) |
+| *Login and role selection* | *Conversational interface with security telemetry* |
 
-# Configure your API key
-copy .env.example .env     # Windows
-cp .env.example .env       # Linux / macOS
-# Edit .env and insert your GROQ_API_KEY
+**Note:** Screenshots are demonstrations of the application's interface. Displayed metrics and simulated attack outcomes should not be interpreted as independently validated security benchmarks.
+
+---
+
+## ✨ Key Features
+
+### 1. 🔍 Lexical Threat Detection
+
+Uses configured patterns and rules to identify suspicious prompt content.
+
+Potential detection categories include:
+
+- Prompt injection
+- Jailbreak attempts
+- System-prompt extraction
+- Role manipulation
+- Safety-policy bypass attempts
+
+Detection coverage depends on the rules implemented in the current version.
+
+### 2. 🧠 Semantic Prompt Analysis
+
+Uses text-based similarity techniques to evaluate suspicious prompts against configured threat patterns.
+
+The intended goal is to recognize potentially malicious wording even when it differs from known examples.
+
+Semantic detection can produce false positives and false negatives. Its effectiveness must be evaluated using a representative test dataset.
+
+### 3. 🧹 Prompt Sanitization
+
+Explores prompt sanitization as an additional security step.
+
+Depending on the implemented decision policy, the system can inspect a prompt and apply an appropriate action, such as allowing, blocking, or attempting to sanitize it.
+
+Sanitization should not be treated as a guarantee that all malicious intent has been removed.
+
+### 4. 🔄 Adaptive Threat Memory
+
+Maintains threat-related records to support recognition and analysis of recurring suspicious patterns.
+
+The framework explores how previously observed threats can contribute to future detection decisions.
+
+Persistent storage of a threat record does not, by itself, mean the detection model has been retrained or improved automatically.
+
+### 5. 📊 Security Operations Dashboard
+
+The dashboard provides an interface for examining security activity and application status.
+
+Depending on the enabled modules, dashboard functions include:
+
+- Security event monitoring
+- Threat-category summaries
+- Risk and incident information
+- User and access-management controls
+- Threat history and analytics
+- Security record exports
+
+### 6. 🧪 Interactive Testing Environment
+
+Provides an environment for experimenting with prompts and examining their security outcomes.
+
+Suggested test categories include:
+
+- Benign prompts
+- Direct prompt injection
+- Jailbreak attempts
+- System-prompt extraction
+- Role manipulation
+- Multilingual prompts
+- Tamil and Tanglish examples
+
+The results should be recorded and evaluated before drawing conclusions about detection accuracy.
+
+### 7. 🔐 Authentication and Access Control
+
+The application includes an authentication interface and role-oriented workflows.
+
+For production use, authentication, password storage, authorization, session management, and administrative actions require a dedicated security review.
+
+---
+
+## 🏗️ System Architecture
+
+The conceptual processing workflow is:
+
+```text
+                 ┌──────────────────────┐
+                 │     User Prompt      │
+                 └──────────┬───────────┘
+                            │
+                            ▼
+                 ┌──────────────────────┐
+                 │  Input Validation    │
+                 └──────────┬───────────┘
+                            │
+                            ▼
+                 ┌──────────────────────┐
+                 │  Lexical Detection   │
+                 └──────────┬───────────┘
+                            │
+                            ▼
+                 ┌──────────────────────┐
+                 │ Semantic Analysis    │
+                 └──────────┬───────────┘
+                            │
+                            ▼
+                 ┌──────────────────────┐
+                 │ Risk / Decision Gate │
+                 └──────────┬───────────┘
+                            │
+                 ┌──────────┴───────────┐
+                 ▼                      ▼
+        ┌────────────────┐     ┌────────────────┐
+        │ Allow / Process│     │ Block / Review │
+        └────────┬───────┘     └────────────────┘
+                 │
+                 ▼
+        ┌────────────────┐
+        │ Sanitization   │
+        │ if configured  │
+        └────────┬───────┘
+                 │
+                 ▼
+        ┌────────────────┐
+        │ Model Response │
+        └────────┬───────┘
+                 │
+                 ▼
+        ┌────────────────┐
+        │ Event Logging  │
+        └────────────────┘
 ```
 
-### 2. Launch the Application
+This diagram illustrates the intended security workflow. The actual execution order and enforcement behavior depend on the current implementation.
 
-#### Windows (Easiest Way)
+---
+
+## 🛠️ Technology Stack
+
+| Technology | Purpose |
+|---|---|
+| Python | Core application and security logic |
+| Streamlit | User interface and dashboard |
+| FastAPI | Backend API, where configured |
+| Scikit-learn | Text processing and similarity techniques, where implemented |
+| Pandas | Data processing, where implemented |
+| JSON | Local application data and records |
+| Git and GitHub | Version control and source-code hosting |
+
+Additional libraries and external model providers may be used depending on the configuration in `requirements.txt`.
+
+---
+
+## 📂 Project Structure
+
+```text
+Aegis-AI-Phase1-Version1/
+│
+├── .streamlit/
+│   └── config.toml
+│
+├── assets/
+│   └── screenshots/
+│       ├── soc_dashboard_overview.png
+│       ├── testing_lab_pipeline_full.png
+│       ├── login_screen.png
+│       └── user_chat_view.png
+│
+├── backend/
+│   ├── attack_logger.py
+│   ├── auth.py
+│   ├── blacklist_manager.py
+│   ├── dashboard_analytics.py
+│   ├── llm_engine.py
+│   ├── main.py
+│   ├── runner.py
+│   ├── threat_engine.py
+│   ├── threat_intelligence.py
+│   └── user_manager.py
+│
+├── data/
+│
+├── experiments/
+│
+├── frontend/
+│   └── app.py
+│
+├── security/
+│   ├── prompt_detector.py
+│   ├── prompt_sanitizer.py
+│   ├── semantic_detector.py
+│   └── threat_memory.py
+│
+├── tests/
+│   └── test_aegis.py
+│
+├── .env.example
+├── .gitignore
+├── LICENSE
+├── README.md
+├── requirements.txt
+├── run.bat
+├── run.ps1
+└── streamlit_app.py
+```
+
+The directory listing is based on the project's documented structure. Check the repository if any file names or modules have changed.
+
+---
+
+## 🚀 Getting Started
+
+### Prerequisites
+
+Install the following before running the project:
+
+- Python compatible with the installed dependencies
+- Git
+- Visual Studio Code or another code editor
+- A terminal such as PowerShell or Command Prompt
+
+### Step 1: Clone the Repository
+
+```bash
+git clone https://github.com/mohamedrizwan4518/An-adaptive-self-healing-semantic-ai-firewall-framework-v1-phase-1-.git
+```
+
+Navigate into the project:
+
+```bash
+cd An-adaptive-self-healing-semantic-ai-firewall-framework-v1-phase-1-
+```
+
+### Step 2: Create a Virtual Environment
+
+```bash
+python -m venv .venv
+```
+
+Activate it on Windows PowerShell:
+
+```powershell
+.\.venv\Scripts\Activate.ps1
+```
+
+On Windows Command Prompt:
+
+```bat
+.venv\Scripts\activate.bat
+```
+
+On Linux or macOS:
+
+```bash
+source .venv/bin/activate
+```
+
+### Step 3: Install Dependencies
+
+```bash
+python -m pip install --upgrade pip
+pip install -r requirements.txt
+```
+
+### Step 4: Configure Environment Variables
+
+If the project uses environment variables, create a local `.env` file from the example:
+
+**Windows PowerShell:**
+
+```powershell
+Copy-Item .env.example .env
+```
+
+**Linux or macOS:**
+
+```bash
+cp .env.example .env
+```
+
+Open `.env` and configure the required values according to the application's implementation.
+
+If an external LLM provider is configured, add its API key using the variable name expected by the code.
+
+**Never commit real API keys, passwords, or other secrets to GitHub.**
+
+### Step 5: Launch the Application
+
+For Windows PowerShell, the project provides a startup script:
+
 ```powershell
 .\run.ps1
-# or in Command Prompt:
-run.bat
 ```
 
-#### Manual / Cross-Platform
+Alternatively, launch the Streamlit entry point directly:
+
 ```bash
 streamlit run streamlit_app.py
 ```
-* **Web Application UI**: `http://localhost:8501`
-* **FastAPI Backend Server**: `http://127.0.0.1:8000` (auto-started)
-* **Interactive OpenAPI Swagger Docs**: `http://127.0.0.1:8000/docs`
 
----
-
-## 🧪 Automated Testing & Audit Suite
-
-Run the comprehensive unit and integration test suite verifying all 9 security gates, authentication, user lifecycle, and detection pipelines:
-
-```bash
-python -m unittest tests/test_aegis.py -v
-```
-
-All 9 tests pass with exit code 0:
-- `test_01_health_and_root`
-- `test_02_authentication`
-- `test_03_user_security_lifecycle`
-- `test_04_prompt_detector_multilingual`
-- `test_05_semantic_detector`
-- `test_06_prompt_sanitizer`
-- `test_07_chat_endpoint_security_pipeline`
-- `test_08_analytics_and_threat_intelligence`
-- `test_09_threat_memory_management`
-
----
-
-## 👥 Demo Accounts (1-Click Login in UI)
-
-| Role | Username | Password | Purpose |
-| :--- | :--- | :--- | :--- |
-| **SOC Administrator** | `admin` | `admin123` | Full administrative control, live threat triage, analytics, user policy |
-| **Standard User** | `hari` | `user123` | Safe conversational chat with real-time security inspection telemetry |
-| **Simulated Attacker** | `rashi` | `user1234` | Adversarial payload simulation and quota testing |
-
----
-
-## 📂 Repository Structure
+If startup succeeds, Streamlit normally displays a local address similar to:
 
 ```text
-├── .streamlit/
-│   └── config.toml             # Streamlit theme & server options
-├── assets/
-│   └── screenshots/            # Curated UI demonstration captures
-├── backend/
-│   ├── attack_logger.py        # Attack logging & persistence
-│   ├── auth.py                 # User authentication & role management
-│   ├── blacklist_manager.py    # IP/user blacklist manager
-│   ├── dashboard_analytics.py  # Aggregated metrics & SOC telemetry
-│   ├── llm_engine.py           # Multi-provider LLM & Groq integration
-│   ├── main.py                 # FastAPI application & security endpoints
-│   ├── runner.py               # Auto-supervisor for single-process deployments
-│   ├── threat_engine.py        # Risk score calculation & heuristics
-│   ├── threat_intelligence.py  # Trend analytics & incident reports
-│   └── user_manager.py         # User status, warnings & block policies
-├── data/
-│   ├── attacks.json            # Attack incidents database
-│   ├── blacklist.json          # Blacklisted entities
-│   ├── blocked_users.json      # Blocked users ledger
-│   ├── threat_memory.json      # Adaptive threat memory storage
-│   ├── users.json              # System users database
-│   └── warnings.json           # User warnings log
-├── frontend/
-│   └── app.py                  # Full Cyber SOC & Testing Lab Dashboard (Streamlit)
-├── security/
-│   ├── prompt_detector.py      # Lexical signature pattern matcher
-│   ├── prompt_sanitizer.py     # In-flight neutralizing engine
-│   ├── semantic_detector.py    # Sub-word TF-IDF / Neural cosine detector
-│   └── threat_memory.py        # Self-healing threat memory manager
-├── tests/
-│   └── test_aegis.py           # 9-Gate integration & unit test suite
-├── .env.example                # Safe environment variables template
-├── .gitignore                  # Git ignore rules (protects .env & venv)
-├── README.md                   # Project documentation
-├── requirements.txt            # Python production dependencies
-├── run.bat                     # Windows cmd quick-start script
-├── run.ps1                     # Windows PowerShell quick-start script
-└── streamlit_app.py            # Streamlit Cloud root entrypoint
+http://localhost:8501
 ```
+
+Open the address in your browser.
+
+**Note:** The availability of the backend API and its documentation depends on whether the backend starts successfully.
 
 ---
 
-## 📤 Pushing to GitHub
+## 🧪 Testing
 
-Follow these steps to push to your GitHub repository:
+The repository includes a test file at:
+
+```text
+tests/test_aegis.py
+```
+
+To execute the test suite, use:
 
 ```bash
-# 1. Initialize local repository and set branch to main
-git init -b main
-
-# 2. Stage all clean project files (.env & venv are automatically excluded)
-git add .
-
-# 3. Commit your initial release
-git commit -m "feat: Aegis AI Enterprise Firewall & Autonomous SOC v2.5.0"
-
-# 4. Add your GitHub remote repository (replace with your URL)
-git remote add origin https://github.com/<your-username>/<your-repo-name>.git
-
-# 5. Push to GitHub
-git push -u origin main
+python -m unittest tests.test_aegis -v
 ```
+
+Review the terminal output to determine which tests passed, failed, or encountered errors.
+
+Do not assume that every test passes without running the suite in your environment.
+
+### Suggested Evaluation Areas
+
+| Area | What to Evaluate |
+|---|---|
+| Detection | Correct identification of known attack examples |
+| False positives | Benign prompts incorrectly classified as malicious |
+| False negatives | Malicious prompts incorrectly classified as benign |
+| Multilingual support | Detection behavior for English, Tamil, and Tanglish |
+| Authentication | Correct handling of valid and invalid credentials |
+| Access control | Whether restricted actions are properly enforced |
+| Sanitization | Whether transformed prompts remain safe and useful |
+| Threat memory | Whether records persist and are handled correctly |
+| Performance | Processing time and resource consumption |
+
+For a research-quality evaluation, use a documented dataset, fixed test conditions, reproducible measurements, and a clearly defined evaluation methodology.
+
+---
+
+## 🔐 Security Considerations
+
+Aegis AI is an experimental project. It should not be deployed as the sole security boundary for a production LLM application.
+
+Before production deployment, consider:
+
+- Secure password hashing and authentication.
+- Server-side authorization for every privileged action.
+- Protection against direct and indirect prompt injection.
+- Validation of external model responses.
+- Secure handling of API keys and environment variables.
+- Input validation and output handling.
+- Rate limiting and abuse prevention.
+- Audit-log integrity and sensitive-data minimization.
+- Isolation of untrusted model output.
+- Security testing against realistic attack scenarios.
+
+### Demo Credentials
+
+If the application provides demonstration accounts, use only the credentials configured in the source code and intended for local testing.
+
+Avoid publishing working administrator credentials for a publicly accessible deployment. Replace default credentials and disable demonstration accounts before exposing the application to external users.
+
+---
+
+## ☁️ Deployment
+
+The repository contains a Streamlit entry point named:
+
+```text
+streamlit_app.py
+```
+
+A possible hosting option is Streamlit Community Cloud.
+
+Before deployment:
+
+1. Confirm the application runs locally.
+2. Confirm all required dependencies are declared in `requirements.txt`.
+3. Review file-system paths and data persistence requirements.
+4. Configure secrets through the hosting platform's secret-management interface.
+5. Verify whether the backend startup mechanism is compatible with the hosting environment.
+6. Test authentication, session handling, and application behavior after deployment.
+
+Deployment is not guaranteed simply because the repository contains a Streamlit entry point. Backend processes, persistent storage, API configuration, and hosting restrictions must be verified.
+
+---
+
+## 🗺️ Future Roadmap
+
+Potential future improvements include:
+
+- [ ] Expand the prompt-attack evaluation dataset.
+- [ ] Add reproducible detection benchmarks.
+- [ ] Evaluate precision, recall, F1-score, and false-positive rate.
+- [ ] Improve Tamil and Tanglish detection.
+- [ ] Add structured security-event reporting.
+- [ ] Improve explainability of detection decisions.
+- [ ] Strengthen authentication and authorization.
+- [ ] Add automated regression tests.
+- [ ] Evaluate performance under concurrent requests.
+- [ ] Improve deployment configuration and operational monitoring.
+- [ ] Document limitations and threat-model assumptions.
+
+These items are proposed enhancements, not claims that the functionality is already implemented.
+
+---
+
+## 🎓 Project Information
+
+**Project:** Aegis AI — Adaptive Semantic AI Firewall  
+**Phase:** Phase 1  
+**Version:** 1.0  
+**Domain:** Artificial Intelligence, Application Security, and LLM Security  
+**Interface:** Streamlit  
+**Backend:** Python / FastAPI, where configured  
+
+The project explores how layered detection, risk-based decisions, and threat monitoring can contribute to protecting applications that use Large Language Models.
+
+---
+
+## 👨‍💻 Developer
+
+**Mohamed Rizwan R**
+
+B.Tech — Artificial Intelligence and Data Science  
+Achariya College of Engineering and Technology, Puducherry
+
+**GitHub:** [@mohamedrizwan4518](https://github.com/mohamedrizwan4518)
+
+**Project Repository:** [Aegis AI — Phase 1, Version 1](https://github.com/mohamedrizwan4518/An-adaptive-self-healing-semantic-ai-firewall-framework-v1-phase-1-)
+
+---
+
+## 📄 License
+
+This project includes a `LICENSE` file in the repository. Refer to that file for the applicable license terms.
+
+---
+
+<p align="center">
+  <strong>Built to explore safer and more responsible LLM applications.</strong>
+  <br>
+  Detect threats. Evaluate risks. Strengthen defenses.
+</p>
